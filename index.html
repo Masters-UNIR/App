@@ -17,6 +17,304 @@
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <h1>Hola desde el index¡¡¡¡¡¡¡¡¡</h1>
+    <div class="wrapper">
+		<header class="header">
+			<div class="header-sup">
+				<div class="contactar">
+					<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
+					</div>
+					<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com</div>
+					<div class="horario"><i class="fa-solid fa-clock"></i> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</div>
+				</div>
+				<div class="bienvenida">
+					<div class="bienve">Bienvenido <span id="nombre-usuario" class="name"></span></div>
+					<div class="cuenta"><i class="fa-solid fa-user"></i> <button id="open_modal_register">Mi Cuenta</button></div>
+				</div>
+			</div>
+			<div class="header-inf">
+				<div class="logo">
+					<h1 class="">Herbolario <br><span class="marca">AQUÍ VA LA MARCA</span></h1>
+				</div>
+				<ul>
+					<li class="submenu">
+						<div id="img-carrito" class="carrito"><i class="fa-solid fa-cart-shopping"></i> Mi Carrito</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+        <!-- Menú con Bootstrap -->
+		<main>
+            <!-- Slider generado con bootstrap AQUÍ -->
+
+			<hr>
+			<section class="currency-container">
+				<div class="currency">
+					<h2 class=""><label for="currency">Escoja su Divisa</label></h2>
+					<select class="" name="currency" id="currency">
+						<option value="ARS">ARS | PESO ARGENTINO</option>
+						<option value="BOB">BOB | BOLIVIANO</option>
+						<option value="CLP">CLP | PESO CHILENO</option>
+						<option value="COP">COP | PESO COLOMBIANO</option>
+						<option value="CRC">CRC | COLÓN COSTARRICENSE</option>
+						<option value="DOP">DOP | PESO DOMINICANO</option>
+						<option value="EUR" selected>EUR | EURO</option>
+						<option value="GTQ">GTQ | QUETZAL GUATEMALTECO</option>
+						<option value="MXN">MXN | PESO MEXICANO</option>
+						<option value="PEN">PEN | SOL PERUANO</option>
+						<option value="PYG">PYG | GUARANÍ PARAGUAYO</option>
+						<option value="USD">USD | DOLAR DE EEUU</option>
+						<option value="UYU">UYU | PESO URUGUAYO</option>
+						<option value="VES">VES | BOLIVAR VENEZOLANO</option>
+					</select>
+				</div>
+			</section>
+			<hr>
+			<section class="todos">
+				<h2 class="">Todos los productos</h2>
+				<div class="ordenar">
+					<form action="">
+						<label for="ordenar">Ordenar por:</label>
+						<select class="" name="ordenar" id="ordenar">
+							<option value="">Seleccione</option>
+							<option value="pa">Precio: más bajo el primero</option>
+							<option value="pd">Precio: más alto el primero</option>
+							<option value="na">Nombre: de la A a la Z</option>
+							<option value="nd">Nombre: de la Z a la A</option>
+						</select>
+					</form>
+				</div>
+				<div class="todos-productos">
+					<div class="zona-filtros">
+						<h4 class="filtros">Filtros</h4>
+						<div class="contenedor-filtros">
+							<form id="filtros">
+								<div class="precios">
+									<div class="">
+										<label for="precio-min">Precio Mínimo</label>
+										<select class="" name="precio-min" id="precio-min">
+											<option value="">Seleccione</option>
+											<option value="2">2€</option>
+											<option value="5">5€</option>
+											<option value="10">10€</option>
+											<option value="15">15€</option>
+											<option value="20">20€</option>
+										</select>
+									</div>
+									<div class="mt-6">
+										<label for="precio-max">Precio Máximo</label>
+										<select class="" name="precio-max" id="precio-max">
+											<option value="">Seleccione</option>
+											<option value="20">20€</option>
+											<option value="25">25€</option>
+											<option value="30">30€</option>
+											<option value="35">35€</option>
+											<option value="40">40€</option>
+										</select>
+									</div>
+								</div>
+								<div class="categorias">
+									<div class="">
+										<label for="categoria">Categoría</label>
+										<select class="" name="categoria" id="categoria">
+											<option value="">Seleccione</option>
+											<!-- Se cargan dinamicamente -->
+										</select>
+									</div>
+									<div class="">
+										<label for="subcategoria">Subcategoría</label>
+										<select class="" name="subcategoria" id="subcategoria">
+											<option value="">Seleccione</option>
+											<!-- generados dinámicamente a partir de la categoría seleccionada -->
+										</select>
+									</div>
+								</div>
+								<div class="marcas">
+									<div class="mt-6">
+										<label for="marca">Marca</label>
+										<select class="" name="marca" id="marca">
+											<option value="">Seleccione</option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+											<option value=""></option>
+										</select>
+									</div>
+									<div class="mt-6">
+										<label for="descuento">Descuento</label>
+										<select class="w-full p-4 rounded-lg text-base" name="descuento" id="descuento">
+											<option value="">Seleccione</option>
+											<option value="1">Hasta 10%</option>
+											<option value="11">De 11% a 20%</option>
+											<option value="21">De 21% a 30%</option>
+											<option value="31">De 31% a 40%</option>
+											<option value="41">De 41% a 50%</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="zona-productos" id="lista-productos">
+						<div class="slider-container-tv cards-productos">
+							<ul class="" id="resultado">
+								<!-- Listado de productos generados dinámicamente -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr>
+			<section class="marcas">
+				<h2 class="">Marcas Destacadas</h2>
+				<div class="container-marcas">
+					<ul class="">
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas01.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas02.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas03.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas04.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas05.jpg" alt="">
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<hr>
+			<section class="info content">
+				<div class="cards-info">
+					<div class="card-info">
+						<div class="iconos">
+							<i class="fas fa-credit-card"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+					<div class="card-info">
+						<div class="iconos2">
+							<i class="fa-solid fa-comments"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+					<div class="card-info">
+						<div class="iconos3">
+							<i class="fa-solid fa-truck"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+				</div> <!-- Fin .cards-info -->
+			</section>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="footer-sup">
+			<div class="identidad">
+				<div class="logo">
+					<h2 class="">Herbolario <br><span class="marca">AQUÍ VA LA MARCA</span></h2>
+				</div>
+				<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
+				</div>
+				<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com
+				</div>
+			</div>
+			<div class="menu">
+				<div class="empresa">
+					<h3 class="">SOBRE LA EMPRESA</h3>
+					<nav class="sobre-empresa">
+						<ul>
+							<li>Conócenos</li>
+							<li>Política de Privacidad</li>
+							<li>Pólitica de Cookies</li>
+							<li>Condiciones Generales de Venta</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="cuenta">
+					<h3 class="">MI CUENTA</h3>
+					<nav class="mi-cuenta">
+						<ul>
+							<li>Mi Cuenta</li>
+							<li>Ver Carrito</li>
+							<li>Mis Listas</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="infor">
+					<h3 class="">INFORMACIÓN</h3>
+					<nav class="informacion">
+						<ul>
+							<li>Formas de Pago</li>
+							<li>FAQ's</li>
+							<li>Contacto</li>
+							<li>Envíos</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="iconos">
+			<div class="pagos">
+				<div class="visa"><i class="fa-brands fa-cc-visa"></i></div>
+				<div class="master-card"><i class="fa-brands fa-cc-mastercard"></i></div>
+				<div class="paypal"><i class="fa-brands fa-paypal"></i></div>
+			</div>
+			<div class="redes">
+				<div class="facebook"><i class="fa-brands fa-square-facebook"></i></div>
+				<div class="twitter"><i class="fa-brands fa-square-twitter"></i></div>
+				<div class="youtube"><i class="fa-brands fa-square-youtube"></i></div>
+				<div class="instagram"><i class="fa-brands fa-square-instagram"></i></div>
+			</div>
+		</div>
+		<div class="copy">
+			<p>AQUÍ VA LA MARCA SL &reg; - Avd. Tres Torres 78, 3º 4ª, 02459 Palanquilla del Vallès - Tel. 647894562 - info@app.com</p>
+			<p>2024 &copy;. Todos los derechos reservados</p>
+		</div>
+	</footer>
+	<!-- Botón volver arriba -->
+	<div class="go-top-container">
+		<div class="go-top-button">
+			<i class="fa-solid fa-chevron-up"></i>
+		</div>
+	</div>
+
+
+	<script src="./assets/js/goTop.js"></script>
+	<script src="./assets/js/Usuario.js"></script>
+	<script src="./assets/js/usuarios.js"></script>
+	<script src="./assets/js/productos.js"></script>
+	<script src="./assets/js/divisas.js"></script>
+	<script src="./assets/js/filtrado.js"></script>
+	<!-- <script src="assets/js/compra.js"></script> -->
 </body>
 </html>
