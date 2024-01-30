@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito App E-commerce</title>
+    <!-- Estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/92d719d9ae.js" crossorigin="anonymous"></script>
+	<!-- CDN Sweetalert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="wrapper">
+		<header class="header">
+			<div class="header-sup">
+				<div class="contactar">
+					<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
+					</div>
+					<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com</div>
+					<div class="horario"><i class="fa-solid fa-clock"></i> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</div>
+				</div>
+				<div class="bienvenida">
+					<div class="bienve">Bienvenido <span id="nombre-usuario" class="name"></span></div>
+					<div class="cuenta"><i class="fa-solid fa-user"></i> <button id="open_modal_register">Mi Cuenta</button></div>
+				</div>
+			</div>
+            <div class="header-inf">
+                <div class="logo">
+                    <h1 class="">Herbolario <br><span class="marca">AQUÍ LA MARCA</span></h1>
+                </div>
+                <h2>Carrito de la compra</h2>
+                <ul>
+                    <li class="submenu">
+                        <div id="img-carrito" class="carrito"><i class="fa-solid fa-cart-shopping"></i> Mi Carrito</div>
+                        <div id="carrito" class="">
+                            <table id="lista-carrito" class="">
+                                <thead>
+                                    <tr>
+                                        <th class="">Imagen</th>
+                                        <th class="">Nombre</th>
+                                        <th class="">Precio Unitario</th>
+                                        <th class="">Cantidad</th>
+                                        <th class=""></th>
+                                    </tr>
+                                </thead>
+                                <tbody><!-- Se completa dinámicamente --></tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">Total: <span class="" id="total"></span><span class="moneda">€</span></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="">Vaciar Carrito</a>
+                            <a href="#" id="finalizar-pedido" class="">Finalizar Pedido</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <script src="./assets/js/carrito.js"></script>
+</body>
+</html>
