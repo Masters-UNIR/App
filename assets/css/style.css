@@ -33,3 +33,58 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.go-top-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -10;
+}
+
+.go-top-button {
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    z-index: -10;
+    position: relative;
+    background-color: #66cb52;
+}
+
+.fa-chevron-up {
+    position: absolute;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    top: 48%;
+    left: 50%;
+    color: white;
+}
+
+.go-top-button {
+	transition: .2s;
+	transform: translate(-50%, -50%);
+}
+
+.go-top-button .fa-chevron-up {
+	transform: translate(-50%, -50%) scale(0);
+	transition: .2s;
+}
+
+.show {
+	z-index: 10;
+}
+
+.show .go-top-button {
+	animation: popup .3s ease-in-out;
+	width: 64px;
+	height: 64px;
+	z-index: 11;
+}
+
+.show .fa-chevron-up {
+	transform: translate(-50%, -50%) scale(1);
+}
