@@ -88,3 +88,20 @@
 .show .fa-chevron-up {
 	transform: translate(-50%, -50%) scale(1);
 }
+
+@keyframes popup {
+	0% {
+		width: 0px;
+		height: 0px;
+	}
+
+	50% {
+		width: 80px;
+		height: 80px;
+	}
+
+	100% {
+		width: 64px;
+		height: 64px;
+	}
+}
