@@ -4,7 +4,9 @@
     background-color: #e0adad;
 	color: red;
 	font-weight: bold;
+    width: 380px;
     padding: .8rem;
+    margin: 0 auto;
     margin-top: 2rem;
 }
 
@@ -22,7 +24,7 @@
 
 .registrado-ok {
     text-align: center;
-    width: auto;
+    width: 380px;
     margin: 0 auto;
     padding: .8rem;
     background-color: rgb(104, 212, 104);
