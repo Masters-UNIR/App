@@ -1,0 +1,21 @@
+.error {
+    border: 2px solid red;
+	text-align: center;
+    background-color: #e0adad;
+	color: red;
+	font-weight: bold;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.border-2-red {
+    border: 2px solid red;
+}
+
+.border-2-green {
+    border: 2px solid green;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
