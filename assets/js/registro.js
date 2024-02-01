@@ -296,6 +296,7 @@ function registrarUsuario(e) {
 		formRegister.reset();
 
 		iniciar();
+		location.href = "login.html";
 
 	}, 4000);
 
@@ -304,6 +305,7 @@ function registrarUsuario(e) {
 
 // Agregar el usuario registrado al LocalStorage
 function sincronizarUsuarioStorage() {
+	localStorage.clear();
 	localStorage.setItem('usuario', JSON.stringify(usuarioRegistrado));
 	// mostrarUsuario(usuarioRegistrado);
 }

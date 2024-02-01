@@ -22,7 +22,8 @@
     cursor: not-allowed;
 }
 
-.registrado-ok {
+.registrado-ok,
+.logeado-ok {
     text-align: center;
     width: 380px;
     margin: 0 auto;
