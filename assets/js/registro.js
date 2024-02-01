@@ -32,8 +32,29 @@ let number = false;
 let symbol = false;
 let caracter;
 
+// Variables para el registro de nuevo usuario
+let usuarioId = 0;
+let nifValidado = ''
+let nameValidado = '';
+let surnameValidado = '';
+let usernameValidado = '';
+let emailValidado = '';
+let passwordValidado = '';
+let direccionValidado = '';
+let cpValidado = '';
+let ciudadValidado = '';
+let paisValidado = '';
+let provinciaValidado = '';
+let phoneValidado = '';
+let admin = false;
+
+let usuarioRegistrado = [];
+
 // Event listeners
 document.addEventListener("DOMContentLoaded", iniciar);
+
+// registrar cliente
+formRegister.addEventListener('submit', registrarUsuario);
 
 // Funciones
 function iniciar() {
@@ -233,5 +254,56 @@ function validarFormulario(e) {
 		btnEnviar.classList.add('cursor-pointer');
 
 		// Guardar valores de campos en variables
+		usuarioId = usuarios.length + 1;
+		nifValidado = nif.value;
+		nameValidado = name.value;
+		surnameValidado = surname.value;
+		usernameValidado = usernameRegister.value.toLowerCase();
+		emailValidado = emailRegister.value.toLowerCase();
+		passwordValidado = passwordRegister.value;
+		direccionValidado = direccion.value;
+		cpValidado = cp.value;
+		ciudadValidado = ciudad.value;
+		paisValidado = pais.value;
+		provinciaValidado = provincia.value;
+		phoneValidado = phone.value;
+		admin = false;
 	}
+}
+
+// Añadir el nuevo usuario al array de usuarios
+function registrarUsuario(e) {
+	e.preventDefault();
+
+	const usuario = new Usuario(usuarioId, nifValidado, nameValidado, surnameValidado, usernameValidado, emailValidado, passwordValidado, direccionValidado, cpValidado, ciudadValidado, paisValidado, provinciaValidado, phoneValidado, admin);
+
+	// Guardar el registro del usuario en el array usuarios
+	usuarios.push(usuario);
+	
+	// Guardar el usuario registrado en localStorage
+	usuarioRegistrado.push(usuario);
+	sincronizarUsuarioStorage();
+
+	// Comunicar que se registro correctamente
+	const parrafo = document.createElement('p');
+	parrafo.textContent = 'El registro se efectuó correctamente';
+	parrafo.classList.add('registrado-ok');
+
+	botonEnviar.appendChild(parrafo);
+
+	setTimeout(() => {
+		parrafo.remove();
+		formRegister.reset();
+
+		iniciar();
+
+	}, 4000);
+
+	return usuarios;
+}
+
+// Agregar el usuario registrado al LocalStorage
+function sincronizarUsuarioStorage() {
+	localStorage.setItem('usuario', JSON.stringify(usuarioRegistrado));
+	// mostrarUsuario(usuarioRegistrado);
 }
