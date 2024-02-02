@@ -56,6 +56,44 @@ descuento.addEventListener('change', e => {
     filtrarProducto();
 })
 
+// Evento para la ordenación
+ordenar.addEventListener('change', ordenarProductos);
+
+// Funciones
+// Ordenar Productos
+function ordenarProductos(e) {
+    switch (e.target.value) {
+		case 'pa':
+			ordenarPrecioMenorMayor();
+			ordenadoPor = 'pa';
+			break;
+		case 'pd':
+			ordenarPrecioMayorMenor();
+			ordenadoPor = 'pd';
+			break;
+        // TODO ordenar por nombre
+		default:
+			ordenadoPor = '';
+			break;
+	}
+}
+
+// Ordenar productos por precio de menor a mayor
+const ordenarPrecioMenorMayor = () => {
+    if (resultadoFiltrado) {
+        const resultadoOrdenado = resultadoFiltrado.sort((a, b) => a.preciobaseeu - b.preciobaseeu);
+		mostrarProductos(resultadoOrdenado, rate, currencySymbol);
+    }
+}
+
+// Ordenar productos por precio de mayor a menor
+const ordenarPrecioMayorMenor = () => {
+	if (resultadoFiltrado) {
+		const resultadoOrdenado = resultadoFiltrado.sort((a, b) => b.preciobaseeu - a.preciobaseeu);
+		mostrarProductos(resultadoOrdenado, rate, currencySymbol);
+	}
+}
+
 // Limpiar el contenido del ul #resultado
 function limpiarHTML() {
     while (resultado.firstChild) {
@@ -111,7 +149,21 @@ function filtrarProducto() {
 
         // comprobamos si estan ordenados por algún criterio
         if (ordenadoPor) {
-            // TODO mostrar casos posibles de ordenación con un switch
+            switch (ordenadoPor) {
+				case 'pa':
+					ordenarPrecioMenorMayor();
+					ordenadoPor = 'pa';
+					break;
+				case 'pd':
+					ordenarPrecioMayorMenor();
+					ordenadoPor = 'pd';
+					break;                   
+                // TODO mostrar casos posibles de ordenación por nombre
+				default:
+					ordenadoPor = '';
+					break;
+			}
+
         } else {
             // mostrar los productos filtrados
             mostrarProductos(resultadoFiltrado, rate, currencySymbol);
