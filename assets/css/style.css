@@ -1,0 +1,107 @@
+.error {
+    border: 2px solid red;
+	text-align: center;
+    background-color: #e0adad;
+	color: red;
+	font-weight: bold;
+    width: 380px;
+    padding: .8rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.border-2-red {
+    border: 2px solid red;
+}
+
+.border-2-green {
+    border: 2px solid green;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+
+.registrado-ok,
+.logeado-ok {
+    text-align: center;
+    width: 380px;
+    margin: 0 auto;
+    padding: .8rem;
+    background-color: rgb(104, 212, 104);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.go-top-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -10;
+}
+
+.go-top-button {
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    z-index: -10;
+    position: relative;
+    background-color: #66cb52;
+}
+
+.fa-chevron-up {
+    position: absolute;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    top: 48%;
+    left: 50%;
+    color: white;
+}
+
+.go-top-button {
+	transition: .2s;
+	transform: translate(-50%, -50%);
+}
+
+.go-top-button .fa-chevron-up {
+	transform: translate(-50%, -50%) scale(0);
+	transition: .2s;
+}
+
+.show {
+	z-index: 10;
+}
+
+.show .go-top-button {
+	animation: popup .3s ease-in-out;
+	width: 64px;
+	height: 64px;
+	z-index: 11;
+}
+
+.show .fa-chevron-up {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+	0% {
+		width: 0px;
+		height: 0px;
+	}
+
+	50% {
+		width: 80px;
+		height: 80px;
+	}
+
+	100% {
+		width: 64px;
+		height: 64px;
+	}
+}
