@@ -56,6 +56,8 @@ descuento.addEventListener('change', e => {
     filtrarProducto();
 })
 
+// TODO filtros para categoría, subcategoría y marca
+
 // Evento para la ordenación
 ordenar.addEventListener('change', ordenarProductos);
 
@@ -143,7 +145,7 @@ function limpiarHTML() {
 }
 
 // Muestra los productos
-function mostrarProductos(productos, rate = 1, currencySymbol) {
+function mostrarProductos(productos, rate, currencySymbol) {
 
     // Limpiamos el HTML previo
     limpiarHTML();

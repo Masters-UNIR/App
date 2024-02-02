@@ -10,7 +10,9 @@ let rate = 1;
 let currencySymbol;
 
 // Event Listeners
-currency.addEventListener('change', calculate);
+if (currency) {
+	currency.addEventListener('change', calculate);
+}
 
 // Fetch a la API "Exchange Rates" y actualización del DOM
 function calculate() {
@@ -82,7 +84,8 @@ function calculate() {
             // Muestra los productos con los precios adaptados a la nueva divisa
 			mostrarProductos(productos, rate, currencySymbol);
 
-            // TODO Actualizar carrito de compra 
+            carritoHTML(rate, currencySymbol);
+			actualizarTotalesCarrito(articulosCarrito, rate);
 
 			return rate, currencySymbol;
         })

@@ -15,3 +15,5 @@ function mostrarUsuario(usuarios) {
 
 	nombreUsuario.textContent = ` ${nombre} ${apellidos}`;
 }
+
+// TODO logout
