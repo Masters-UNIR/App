@@ -28,12 +28,25 @@ const datosFiltrado = {
 
 let resultadoFiltrado = productos;
 
-console.log(resultadoFiltrado)
-
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
     // Mostramos los productos al cargar la página
     mostrarProductos(resultadoFiltrado, rate, currencySymbol);
+});
+
+// Escucha de eventos para los selects de filtrado
+// Precio mínimo
+minimo.addEventListener('change', e => {
+    datosFiltrado.minimo = e.target.value;
+
+    filtrarProducto();
+});
+
+// Precio máximo
+maximo.addEventListener('change', e => {
+	datosFiltrado.maximo = e.target.value;
+
+	filtrarProducto();
 });
 
 // Limpiar el contenido del ul #resultado
@@ -80,4 +93,54 @@ function mostrarProductos(productos, rate = 1, currencySymbol) {
         // se inserta en el HTML
         resultado.appendChild(productoHTML);
     });
+}
+
+// Filtrar productos en base a filtros
+function filtrarProducto() {
+    resultadoFiltrado = productos.filter(filtrarMinimo).filter(filtrarMaximo);
+
+    // comprobamos que hay resultados de los filtros
+    if (resultadoFiltrado.length) {
+
+        // comprobamos si estan ordenados por algún criterio
+        if (ordenadoPor) {
+            // TODO mostrar casos posibles de ordenación con un switch
+        } else {
+            // mostrar los productos filtrados
+            mostrarProductos(resultadoFiltrado, rate, currencySymbol);
+        }
+        return resultadoFiltrado;
+    } else {
+        // No hay resultados tras el filtrado
+        noResultados();
+    }
+}
+
+// Cuando no hay resultados en el filtrado
+function noResultados() {
+    limpiarHTML();
+
+    const noResultados = document.createElement('div');
+	noResultados.classList.add('error');
+	noResultados.textContent = 'No Hay Resultados';
+	resultado.appendChild(noResultados);
+}
+
+// Funciones de filtrado
+function filtrarMinimo(producto) {
+    const { minimo } = datosFiltrado;
+
+    if (minimo) {
+        return producto.preciobaseeu >= minimo;
+    }
+    return producto;
+}
+
+function filtrarMaximo(producto) {
+    const { maximo } = datosFiltrado;
+
+    if (maximo) {
+		return producto.preciobaseeu <= maximo;
+	}
+	return producto;
 }
