@@ -71,7 +71,14 @@ function ordenarProductos(e) {
 			ordenarPrecioMayorMenor();
 			ordenadoPor = 'pd';
 			break;
-        // TODO ordenar por nombre
+        case 'na':
+            ordenarNombreAscendente();
+            ordenadoPor = 'na';
+            break;
+        case 'nd':
+            ordenarNombreDescendente();
+            ordenadoPor = 'nd';
+            break;
 		default:
 			ordenadoPor = '';
 			break;
@@ -90,6 +97,40 @@ const ordenarPrecioMenorMayor = () => {
 const ordenarPrecioMayorMenor = () => {
 	if (resultadoFiltrado) {
 		const resultadoOrdenado = resultadoFiltrado.sort((a, b) => b.preciobaseeu - a.preciobaseeu);
+		mostrarProductos(resultadoOrdenado, rate, currencySymbol);
+	}
+}
+
+// Ordenar productos por nombre ascendente alfabeticamente
+const ordenarNombreAscendente = () => {
+	if (resultadoFiltrado) {
+		const resultadoOrdenado = resultadoFiltrado.sort((a, b) => {
+			if (a.nombre > b.nombre) {
+				return 1;
+			}
+			if (a.nombre < b.nombre) {
+				return -1;
+			}
+
+			return 0;
+		});
+		mostrarProductos(resultadoOrdenado, rate, currencySymbol);
+	}
+}
+
+// Ordenar productos por nombre descendente alfabeticamente
+const ordenarNombreDescendente = () => {
+	if (resultadoFiltrado) {
+		const resultadoOrdenado = resultadoFiltrado.sort((a, b) => {
+			if (a.nombre < b.nombre) {
+				return 1;
+			}
+			if (a.nombre > b.nombre) {
+				return -1;
+			}
+
+			return 0;
+		});
 		mostrarProductos(resultadoOrdenado, rate, currencySymbol);
 	}
 }
@@ -158,7 +199,14 @@ function filtrarProducto() {
 					ordenarPrecioMayorMenor();
 					ordenadoPor = 'pd';
 					break;                   
-                // TODO mostrar casos posibles de ordenación por nombre
+                case 'na':
+					ordenarNombreAscendente();
+					ordenadoPor = 'na';
+					break;
+				case 'nd':
+					ordenarNombreDescendente();
+					ordenadoPor = 'nd';
+					break;
 				default:
 					ordenadoPor = '';
 					break;
