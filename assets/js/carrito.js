@@ -231,7 +231,7 @@ const actualizarContador = (element, contador) => {
 		// Actualizamos la cantidad
 		const productosCarrito = articulosCarrito.map(productoCarrito => {
 			if (id === productoCarrito.productoId) {
-				productoCarrito.cantidad = element.textContent;
+				productoCarrito.cantidad = contador;
 				return productoCarrito; // retorna el objeto actualizado
 			} else {
 				return productoCarrito; // retorna los objetos que no son duplicados
@@ -268,7 +268,7 @@ function modificarCantidadProducto() {
 	});
 }
 
-// Elimina los cursos de tbody
+// Elimina los productos de tbody
 function limpiarHTMLCarrito() {
     if (contenedorCarrito) {
         while (contenedorCarrito.firstChild) {
@@ -280,15 +280,18 @@ function limpiarHTMLCarrito() {
 // Actualiza totales del carrito
 const actualizarTotalesCarrito = (articulosCarrito, rate) => {
 	totalCompra = articulosCarrito.reduce((acc, productoCarrito) => acc + ((productoCarrito.preciofinal * (rate ? rate : 1)) * productoCarrito.cantidad), 0).toFixed(2);
+	const totalCantidad = articulosCarrito.reduce((acc, item) => acc + item.cantidad, 0);
 
-	pintarTotalesCarrito(totalCompra);
+	pintarTotalesCarrito(totalCantidad, totalCompra);
 	sincronizarCarritoStorage();
 };
 
 // Muestra el total de la compra en el carrito
-const pintarTotalesCarrito = (totalCompra) => {
+const pintarTotalesCarrito = (totalCantidad, totalCompra) => {
+	const contadorCarrito = document.getElementById("contador-carrito");
 	const precioTotal = document.getElementById('total');
 
+	contadorCarrito.textContent = totalCantidad;
     if (precioTotal) {
         precioTotal.innerText = totalCompra;
     }
