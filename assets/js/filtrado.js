@@ -49,6 +49,13 @@ maximo.addEventListener('change', e => {
 	filtrarProducto();
 });
 
+// Descuento
+descuento.addEventListener('change', e => {
+    datosFiltrado.descuento = e.target.value;
+
+    filtrarProducto();
+})
+
 // Limpiar el contenido del ul #resultado
 function limpiarHTML() {
     while (resultado.firstChild) {
@@ -97,7 +104,7 @@ function mostrarProductos(productos, rate = 1, currencySymbol) {
 
 // Filtrar productos en base a filtros
 function filtrarProducto() {
-    resultadoFiltrado = productos.filter(filtrarMinimo).filter(filtrarMaximo);
+    resultadoFiltrado = productos.filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarDescuento);
 
     // comprobamos que hay resultados de los filtros
     if (resultadoFiltrado.length) {
@@ -143,4 +150,15 @@ function filtrarMaximo(producto) {
 		return producto.preciobaseeu <= maximo;
 	}
 	return producto;
+}
+
+function filtrarDescuento(producto) {
+    let { descuento } = datosFiltrado;
+
+    descuento = Number(descuento);
+
+    if (descuento) {
+        return ((producto.descuento >= descuento) && (producto.descuento <= (descuento + 9)));
+    }
+    return producto;
 }
