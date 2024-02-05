@@ -5,6 +5,7 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const finalizarPedidoBtn = document.querySelector('#finalizar-pedido');
 const listaProductos = document.querySelector('#lista-productos');
 const finalizarPedido = document.querySelector('#finalizar-pedido');
+
 let articulosCarrito = [];
 let totalCompra = 0;
 
@@ -28,6 +29,10 @@ function cargarEventListeners() {
 	// Muestra los productos de LocalStorage
 	document.addEventListener('DOMContentLoaded', () => {
 		articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+		rate = Number(JSON.parse(localStorage.getItem('rate'))) || 1;
+
+		currencySymbol = JSON.parse(localStorage.getItem('currencySymbol')) || '€';
 
 		carritoHTML(rate, currencySymbol);
 		actualizarTotalesCarrito(articulosCarrito, rate);
