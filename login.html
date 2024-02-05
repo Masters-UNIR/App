@@ -18,27 +18,54 @@
 </head>
 <body>
     <div class="wrapper">
-		<header class="header">
-			<div class="header-sup">
-				<div class="contactar">
-					<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
+        <header class="header">
+            <!--Menú navegación. Estructura Bootstrap. -->
+			<div class="container">
+				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
+				  <div class="container-fluid">
+					<a class="navbar-brand" href="index2.html">
+					  <img src="assets/css/img/logo 3.svg" alt="Logo" width="60%">
+				   </a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarScroll">
+					  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="index2.html">INICIO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="register.html">REGISTRO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="carrito.html">
+                            <div id="img-carrito" class="carrito">
+							<i class="fa-solid fa-cart-shopping">
+								<span class="contador-carrito" id="contador-carrito"> 0 </span>
+							</i> 
+                            </div>
+                            <!--¿para que es esta linea de codigo en la que vuelves a definir un id carrito?-->
+						<div id="carrito" class="">
+                            </a>
+						</li>
+					  </ul>
 					</div>
-					<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com</div>
-					<div class="horario"><i class="fa-solid fa-clock"></i> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</div>
-				</div>
-				<div class="bienvenida">
+				  </div>
+				</nav>
+		
+			  </div> 
+
+             </header>
+            
+         <div class="header-sup">
+				<div class="bienvenida text-center my-5">
 					<div class="bienve">Bienvenido <span id="nombre-usuario" class="name"></span></div>
 					<div class="cuenta"><i class="fa-solid fa-user"></i> <button id="open_modal_register">Mi Cuenta</button></div>
 				</div>
-			</div>
-            <div class="header-inf">
-                <div class="logo">
-                    <h1 class="">Herbolario <br><span class="marca">MARCA AQUÍ</span></h1>
-                </div>
-            </div>
-        </header>
-        <!-- Menú con Bootstrap -->
-
+		</div>
         <h2>Login</h2>
         <div class="modal_login" id="modal-login">
             <div class="modall">

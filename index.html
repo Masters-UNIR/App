@@ -1,24 +1,38 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es">
+=======
+<html lang="en">
+
+>>>>>>> cd5d6997deeac096a5f1b5e35a6e85b640577eb4
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App E-commerce</title>
+
     <!-- Estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+
     <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+	
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/92d719d9ae.js" crossorigin="anonymous"></script>
+	
 	<!-- CDN Sweetalert -->
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
+
 <body>
     <div class="wrapper">
+
 		<header class="header">
+			<!-- Este header no tiene sentido si tenemos un footer 	que ya contiene esta información!!-->
+
 			<div class="header-sup">
 				<div class="contactar">
 					<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
@@ -26,11 +40,16 @@
 					<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com</div>
 					<div class="horario"><i class="fa-solid fa-clock"></i> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</div>
 				</div>
+
 				<div class="bienvenida">
 					<div class="bienve">Bienvenido/a <span id="nombre-usuario" class="name"></span></div>
 					<div class="cuenta"><i class="fa-solid fa-user"></i> <button id="open_modal_register">Mi Cuenta</button></div>
 				</div>
+
 			</div>
+
+			<!-- Este deveria ser el header principal y debajo tener un menu nav-->
+
 			<div class="header-inf">
 				<div class="logo">
 					<h1 class="">Herbolario <br><span class="marca">AQUÍ VA LA MARCA</span></h1>
@@ -66,7 +85,38 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="container">
+				<nav class="navbar navbar-expand-lg" style="background-color:#27CFC6;">
+				  <div class="container-fluid">
+					<a class="navbar-brand" href="INDEX.HTML">
+					  <img src="#" alt="Logo" width="60%">
+				   </a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarScroll">
+					  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="#">LOGIN</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="Menus.HTML">REGISTRO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#">MI CARRITO</a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>
+		
+			  </div> 
 		</header>
+
         <!-- Menú con Bootstrap -->
 		<main>
             <!-- Slider generado con bootstrap AQUÍ -->
