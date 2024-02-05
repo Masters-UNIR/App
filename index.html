@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
 							<i class="fa-solid fa-cart-shopping">
 								<span class="contador-carrito" id="contador-carrito"> 0 </span>
 							</i> Mi Carrito</div>
-						<div id="carrito" class="">
+						<div id="carrito" class=""  style="display: none;">
 
 							<table id="lista-carrito" class="">
 								<thead>
@@ -53,10 +53,10 @@
 										<th class=""></th>
 									</tr>
 								</thead>
-								<tbody></tbody>
+								<tbody><!-- Aquí se añaden los productos al carrito dinámicamente --></tbody>
 								<tfoot>
 									<tr>
-										<td colspan="5">Total: <span class="" id="total"></span><span class="moneda">€</span></td>
+										<td colspan="5">Total: <span class="" id="total"></span><span class="moneda"></span></td>
 									</tr>
 								</tfoot>
 							</table>
@@ -76,13 +76,14 @@
 				<div class="currency">
 					<h2 class=""><label for="currency">Escoja su Divisa</label></h2>
 					<select class="" name="currency" id="currency">
+						<option value="" selected>Seleccione una Divisa...</option>
 						<option value="ARS">ARS | PESO ARGENTINO</option>
 						<option value="BOB">BOB | BOLIVIANO</option>
 						<option value="CLP">CLP | PESO CHILENO</option>
 						<option value="COP">COP | PESO COLOMBIANO</option>
 						<option value="CRC">CRC | COLÓN COSTARRICENSE</option>
 						<option value="DOP">DOP | PESO DOMINICANO</option>
-						<option value="EUR" selected>EUR | EURO</option>
+						<option value="EUR">EUR | EURO</option>
 						<option value="GTQ">GTQ | QUETZAL GUATEMALTECO</option>
 						<option value="MXN">MXN | PESO MEXICANO</option>
 						<option value="PEN">PEN | SOL PERUANO</option>

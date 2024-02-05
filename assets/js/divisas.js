@@ -6,8 +6,16 @@ const monedas = document.querySelectorAll('.moneda');
 
 const envioGratisApartir = 45;
 
-let rate = 1;
+let rate;
 let currencySymbol;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	rate = Number(JSON.parse(localStorage.getItem('rate'))) || 1;
+
+	currencySymbol = JSON.parse(localStorage.getItem('currencySymbol')) || '€';
+
+})
 
 // Event Listeners
 if (currency) {
@@ -75,21 +83,30 @@ function calculate() {
 
             // Se establece la cuantía del envio gratis en función de la divisa
             envioGratis.textContent = (envioGratisApartir * rate).toFixed(2);
-
-            // Se cambian todos los simbolos de la divisa a la seleccionada
+			
+			// Se cambian todos los simbolos de la divisa a la seleccionada
 			monedas.forEach(moneda => {
 				moneda.textContent = currencySymbol;
 			})
-
+			
             // Muestra los productos con los precios adaptados a la nueva divisa
 			mostrarProductos(productos, rate, currencySymbol);
-
+			
+			
             carritoHTML(rate, currencySymbol);
 			actualizarTotalesCarrito(articulosCarrito, rate);
+
+			sincronizarDivisasStorage();
+
 
 			return rate, currencySymbol;
         })
         .catch(showError);
+}
+
+function sincronizarDivisasStorage() {
+	localStorage.setItem('rate', JSON.stringify(rate));
+	localStorage.setItem('currencySymbol', JSON.stringify(currencySymbol));
 }
 
 // Función que muestra los errores en caso de fallo en la petición a la API
