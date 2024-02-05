@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERBORISTERÍA LA NATURAL</title>
+
+    <!-- Estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/92d719d9ae.js" crossorigin="anonymous"></script>
+	
+	<!-- CDN Sweetalert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+		<header class="header">
+            <!--Menú navegación. Estructura Bootstrap. -->
+            
+			<div class="container">
+				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
+				  <div class="container-fluid">
+					<a class="navbar-brand" href="index2.html">
+					  <img src="assets/css/img/logo 3.svg" alt="Logo" width="60%">
+				   </a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarScroll">
+					  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="index2.html">INICIO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="register.html">REGISTRO</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="carrito.html">
+                            <div id="img-carrito" class="carrito">
+							<i class="fa-solid fa-cart-shopping">
+								<span class="contador-carrito" id="contador-carrito"> 0 </span>
+							</i> 
+                            </div>
+                            <!--¿para que es esta linea de codigo en la que vuelves a definir un id carrito?-->
+						<div id="carrito" class="">
+                            </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>
+		
+			  </div> 
+
+			<!-- Lo del carrito debería estar en una página a parte. No tiene sentido que sea el Home de la Web-->
+				
+
+
+
+			</header>
+
+        
+		<main>
+<!--carrousel de fotos. Bootstrap-->
+         <section class="carrusel">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                 </div>
+         <div class="carousel-inner">
+              <div class="carousel-item active">
+                 <img src="assets/css/img/hierbas 2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Hierbas aromáticas</h3>
+            <p>Aprende a consservar tus hierbas en casa</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/css/img/hierbas 3.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Hierbas medicinales</h3>
+            <p>Los básicos para el bienestar en el hogar</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/css/img/hierbas 4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Recetas</h3>
+            <p>Aprende a preparar tus propios ungüentos</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>  
+
+            <!-- Selector de moneda-->
+	
+			<section class="currency-container my-5">
+				<div class="currency text-center my-5">
+					<h3 class=""><label for="currency">Escoja su Divisa</label></h3>
+					<select class="" name="currency" id="currency">
+						<option value="ARS">ARS | PESO ARGENTINO</option>
+						<option value="BOB">BOB | BOLIVIANO</option>
+						<option value="CLP">CLP | PESO CHILENO</option>
+						<option value="COP">COP | PESO COLOMBIANO</option>
+						<option value="CRC">CRC | COLÓN COSTARRICENSE</option>
+						<option value="DOP">DOP | PESO DOMINICANO</option>
+						<option value="EUR" selected>EUR | EURO</option>
+						<option value="GTQ">GTQ | QUETZAL GUATEMALTECO</option>
+						<option value="MXN">MXN | PESO MEXICANO</option>
+						<option value="PEN">PEN | SOL PERUANO</option>
+						<option value="PYG">PYG | GUARANÍ PARAGUAYO</option>
+						<option value="USD">USD | DOLAR DE EEUU</option>
+						<option value="UYU">UYU | PESO URUGUAYO</option>
+						<option value="VES">VES | BOLIVAR VENEZOLANO</option>
+					</select>
+				</div>
+			</section>
+
+            <!-- Filtrar productos-->
+			<hr>
+			
+
+             <!--Uso de Grid para Cards-->
+   <section class="todos my-5">
+    <h2 class="text-center my-5">NUESTROS PRODUCTOS</h2>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+           <!--Uso de componente Cards-->
+            <div class="card text-center">
+              <img src="assets/css/img/hierbabuena.jpg" class="card-img-top rounded" height=300>
+              <div class="card-body">
+                <h5 class="card-title">Hierbabuena</h5>
+                <p class="card-text">La hierbabuena es muy efectiva en los tratamientos de los dolores menstruales y para tratar problemas nerviosos, ya que es relajante.</p>
+                <a href="" class="btn btn-info text-center mt-3">Leer más</a>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="col-4">
+          <div class="card text-center">
+            <img src="assets/css/img/lavanda.jpg" class="card-img-top rounded" height=300>
+            <div class="card-body">
+              <h5 class="card-title">Lavanda</h5>
+              <p class="card-text">La lavanda actúa como tranquilizante ante estados emocionales de nerviosismo y además ayuda a conciliar el sueño.</p><br>
+              <a href="" class="btn btn-info  text-center mt-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="card text-center">
+            <img src="assets/css/img/manzanilla.png" class="card-img-top rounded" height=300>
+            <div class="card-body">
+              <h5 class="card-title">Manzanilla</h5>
+              <p class="card-text">Ayuda a una buena digestión. Mejora la digestión, relajando los músculos intestinales y evitando la indigestión. Combate la pesadez y te hace sentir mejor.</p>
+              <a href="" class="btn btn-info text-center mt-3">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+ </section>
+
+ <div class="ordenar">
+    <form action="">
+        <label for="ordenar">Ordenar por:</label>
+        <select class="" name="ordenar" id="ordenar">
+            <option value="">Seleccione</option>
+            <option value="pa">Precio: más bajo el primero</option>
+            <option value="pd">Precio: más alto el primero</option>
+            <option value="na">Nombre: de la A a la Z</option>
+            <option value="nd">Nombre: de la Z a la A</option>
+        </select>
+    </form>
+</div>
+<div class="todos-productos">
+    <div class="zona-filtros">
+        <h4 class="filtros">Filtros</h4>
+        <div class="contenedor-filtros">
+            <form id="filtros">
+                <div class="precios">
+                    <div class="">
+                        <label for="precio-min">Precio Mínimo</label>
+                        <select class="" name="precio-min" id="precio-min">
+                            <option value="">Seleccione</option>
+                            <option value="2">2€</option>
+                            <option value="5">5€</option>
+                            <option value="10">10€</option>
+                            <option value="15">15€</option>
+                            <option value="20">20€</option>
+                        </select>
+                    </div>
+                    <div class="mt-6">
+                        <label for="precio-max">Precio Máximo</label>
+                        <select class="" name="precio-max" id="precio-max">
+                            <option value="">Seleccione</option>
+                            <option value="20">20€</option>
+                            <option value="25">25€</option>
+                            <option value="30">30€</option>
+                            <option value="35">35€</option>
+                            <option value="40">40€</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="categorias">
+                    <div class="">
+                        <label for="categoria">Categoría</label>
+                        <select class="" name="categoria" id="categoria">
+                            <option value="">Seleccione</option>
+                            <!-- Se cargan dinamicamente -->
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="subcategoria">Subcategoría</label>
+                        <select class="" name="subcategoria" id="subcategoria">
+                            <option value="">Seleccione</option>
+                            <!-- generados dinámicamente a partir de la categoría seleccionada -->
+                        </select>
+                    </div>
+                </div>
+                <div class="marcas">
+                    <div class="mt-6">
+                        <label for="marca">Marca</label>
+                        <select class="" name="marca" id="marca">
+                            <option value="">Seleccione</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="mt-6">
+                        <label for="descuento">Descuento</label>
+                        <select class="" name="descuento" id="descuento">
+                            <option value="">Seleccione</option>
+                            <option value="1">Hasta 10%</option>
+                            <option value="11">De 11% a 20%</option>
+                            <option value="21">De 21% a 30%</option>
+                            <option value="31">De 31% a 40%</option>
+                            <option value="41">De 41% a 50%</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="zona-productos" id="lista-productos">
+        <div class="slider-container-tv cards-productos">
+            <ul class="" id="resultado">
+                <!-- Listado de productos generados dinámicamente -->
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+			<section class="marcas">
+				<h2 class="">Marcas Destacadas</h2>
+				<div class="container-marcas">
+					<ul class="">
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas01.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas02.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas03.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas04.jpg" alt="">
+							</picture>
+						</li>
+						<li>
+							<picture class="">
+								<img width="120" src="assets/img/marcas05.jpg" alt="">
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<hr>
+			<section class="info content">
+				<div class="cards-info">
+					<div class="card-info">
+						<div class="iconos">
+							<i class="fas fa-credit-card"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+					<div class="card-info">
+						<div class="iconos2">
+							<i class="fa-solid fa-comments"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+					<div class="card-info">
+						<div class="iconos3">
+							<i class="fa-solid fa-truck"></i>
+						</div> <!-- Fin .iconos -->
+						<div class="contenido">
+							<p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
+						</div> <!-- Fin .contenido -->
+					</div> <!-- Fin .card-info -->
+				</div> <!-- Fin .cards-info -->
+			</section>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="footer-sup">
+			<div class="identidad">
+				<div class="logo">
+					<h2 class="">Herbolario <br><span class="marca">AQUÍ VA LA MARCA</span></h2>
+				</div>
+				<div class="tel"><i class="fa-solid fa-phone"></i> 647894562
+				</div>
+				<div class="mail"><i class="fa-solid fa-envelope"></i> info@app.com
+				</div>
+			</div>
+			<div class="menu">
+				<div class="empresa">
+					<h3 class="">SOBRE LA EMPRESA</h3>
+					<nav class="sobre-empresa">
+						<ul>
+							<li>Conócenos</li>
+							<li>Política de Privacidad</li>
+							<li>Pólitica de Cookies</li>
+							<li>Condiciones Generales de Venta</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="cuenta">
+					<h3 class="">MI CUENTA</h3>
+					<nav class="mi-cuenta">
+						<ul>
+							<li>Mi Cuenta</li>
+							<li>Ver Carrito</li>
+							<li>Mis Listas</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="infor">
+					<h3 class="">INFORMACIÓN</h3>
+					<nav class="informacion">
+						<ul>
+							<li>Formas de Pago</li>
+							<li>FAQ's</li>
+							<li>Contacto</li>
+							<li>Envíos</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="iconos">
+			<div class="pagos">
+				<div class="visa"><i class="fa-brands fa-cc-visa"></i></div>
+				<div class="master-card"><i class="fa-brands fa-cc-mastercard"></i></div>
+				<div class="paypal"><i class="fa-brands fa-paypal"></i></div>
+			</div>
+			<div class="redes">
+				<div class="facebook"><i class="fa-brands fa-square-facebook"></i></div>
+				<div class="twitter"><i class="fa-brands fa-square-twitter"></i></div>
+				<div class="youtube"><i class="fa-brands fa-square-youtube"></i></div>
+				<div class="instagram"><i class="fa-brands fa-square-instagram"></i></div>
+			</div>
+		</div>
+		<div class="copy">
+			<p>AQUÍ VA LA MARCA SL &reg; - Avd. Tres Torres 78, 3º 4ª, 02459 Palanquilla del Vallès - Tel. 647894562 - info@app.com</p>
+			<p>2024 &copy;. Todos los derechos reservados</p>
+		</div>
+	</footer>
+	<!-- Botón volver arriba -->
+	<div class="go-top-container">
+		<div class="go-top-button">
+			<i class="fa-solid fa-chevron-up"></i>
+		</div>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="./assets/js/goTop.js"></script>
+	<script src="./assets/js/productos.js"></script>
+	<script src="./assets/js/divisas.js"></script>
+	<script src="./assets/js/filtrado.js"></script>
+	<script src="./assets/js/login-logout.js"></script>
+	<script src="./assets/js/carrito.js"></script>
+	<!-- <script src="assets/js/compra.js"></script> -->
+</body>
+</html>
