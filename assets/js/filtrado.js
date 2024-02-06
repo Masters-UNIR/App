@@ -153,7 +153,7 @@ function mostrarProductos(productos, rate, currencySymbol) {
     // generamos los productos dinamicamente a partir del array de productos
     productos.forEach(producto => {
         // destructuring del objeto producto
-        const { productoId, nombre, marca, presentacion, preciobaseeu, descuento, imagen } = producto;
+        const { productoId, nombre, texto, marca, presentacion, preciobaseeu, descuento, imagen } = producto;
 
         // Calculo del precio final del producto
         let precioFinal = (preciobaseeu - ((preciobaseeu * descuento) / 100)).toFixed(2);
@@ -163,12 +163,11 @@ function mostrarProductos(productos, rate, currencySymbol) {
 
         // generamos un card por producto con sus datos
         productoHTML.innerHTML = `
-            <div class="card-producto">
-                <picture>
-                    <img src="${imagen}" alt="">
-                </picture>
+            <div class="card-producto card text-center">
+                <img src="${imagen}" alt="">
                 <div class="card-body">
-                    <p class="nombre">${nombre}</p>
+                    <h5 class="nombre card-title">${nombre}</h5>
+                    <p class="card-text">${texto}</p>
                     <p class="marca">${marca}</p>
                     <p class="presenta">${presentacion}</p>
                     <p class="descuento"><span class="tachado">${(preciobaseeu * (rate ? rate : 1)).toFixed(2)}</span> <span class="divisa">${currencySymbol ? currencySymbol : '€'}</span> <span class="porcentaje">${descuento}%</span></p>
@@ -177,6 +176,8 @@ function mostrarProductos(productos, rate, currencySymbol) {
                 </div>
             </div>
         `;
+
+        productoHTML.classList.add('col-12', 'col-md-6', 'col-lg-4', 'col-xl-3');
 
         // se inserta en el HTML
         resultado.appendChild(productoHTML);
