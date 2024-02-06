@@ -6,6 +6,10 @@ h1 {
     --bs-gutter-x: 0;
 }
 
+.card {
+    min-height: 400px;
+}
+
 .error {
     border: 2px solid red;
 	text-align: center;

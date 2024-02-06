@@ -177,7 +177,7 @@ function mostrarProductos(productos, rate, currencySymbol) {
             </div>
         `;
 
-        productoHTML.classList.add('col-12', 'col-md-6', 'col-lg-4', 'col-xl-3');
+        productoHTML.classList.add('col-12', 'col-md-6', 'col-lg-4', 'col-xl-3', 'mb-4');
 
         // se inserta en el HTML
         resultado.appendChild(productoHTML);
