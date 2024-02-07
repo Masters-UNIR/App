@@ -7,7 +7,7 @@ const productos = [
         presentacion: '400gr.',
         preciobaseeu: 10,
         descuento: 10,
-        imagen: 'assets/img/prod1.jpg',
+        imagen: 'assets/img/hierbabuena.jpg',
         categoria: ['Sistema Nervioso'],
         subcategoria: ['Relajante'],
         cantidad: 1
@@ -20,7 +20,7 @@ const productos = [
         presentacion: '400gr.',
         preciobaseeu: 11,
         descuento: 10,
-        imagen: 'assets/img/prod2.jpg',
+        imagen: 'assets/img/lavanda.jpg',
         categoria: ['Sistema Nervioso'],
         subcategoria: ['Relajante'],
         cantidad: 1
@@ -33,7 +33,7 @@ const productos = [
         presentacion: '300gr.',
         preciobaseeu: 12,
         descuento: 10,
-        imagen: 'assets/img/prod3.jpg',
+        imagen: 'assets/img/manzanilla.png',
         categoria: ['Sistema Digestivo'],
         subcategoria: ['Digestivo'],
         cantidad: 1
