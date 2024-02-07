@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERBORISTERÍA LA NATURAL</title>
+
+    <!-- Estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/92d719d9ae.js" crossorigin="anonymous"></script>
+	
+	<!-- CDN Sweetalert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+
+
+    <body>
+        <div class="wrapper">
+    
+            <header class="header">
+                <!--Menú navegación. Estructura Bootstrap. -->
+                
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" href="index2.html">
+                          <img src="assets/css/img/logo_3.svg" alt="Logo" width="60%">
+                       </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                          <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="index2.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="productos.html">PRODUCTOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="carrito.html">
+                                <div id="img-carrito" class="carrito">
+                                <i class="fa-solid fa-cart-shopping">
+                                    <span class="contador-carrito" id="contador-carrito"> 0 </span>
+                                </i> 
+                                </div>
+                                <div id="carrito" class="">
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>
+                  </div> 
+    
+            </header>
+    <!-- Filtrar los productos -->
+
+<div class="todos-productos">
+    <div class="zona-filtros">
+        <h4 class="filtros">Filtros</h4>
+        <div class="contenedor-filtros">
+            <form id="filtros">
+				<!-- filtrado por precio-->
+                <div class="precios">
+                    <div class="">
+                        <label for="precio-min">Precio Mínimo</label>
+                        <select class="" name="precio-min" id="precio-min">
+                            <option value="">Seleccione</option>
+                            <option value="2">2€</option>
+                            <option value="5">5€</option>
+                            <option value="10">10€</option>
+                            <option value="15">15€</option>
+                            <option value="20">20€</option>
+                        </select>
+                    </div>
+                    <div class="mt-6">
+                        <label for="precio-max">Precio Máximo</label>
+                        <select class="" name="precio-max" id="precio-max">
+                            <option value="">Seleccione</option>
+                            <option value="20">20€</option>
+                            <option value="25">25€</option>
+                            <option value="30">30€</option>
+                            <option value="35">35€</option>
+                            <option value="40">40€</option>
+                        </select>
+                    </div>
+                </div>
+				<!-- filtrado por categoría-->
+                <div class="categorias">
+                    <div class="">
+                        <label for="categoria">Categoría</label>
+                        <select class="" name="categoria" id="categoria">
+                            <option value="">Seleccione</option>
+                            <!-- Se cargan dinamicamente -->
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="subcategoria">Subcategoría</label>
+                        <select class="" name="subcategoria" id="subcategoria">
+                            <option value="">Seleccione</option>
+                            <!-- generados dinámicamente a partir de la categoría seleccionada -->
+                        </select>
+                    </div>
+                </div>
+
+				<!-- filtrado por marcas-->
+                <div class="marcas">
+                    <div class="mt-6">
+                        <label for="marca">Marca</label>
+                        <select class="" name="marca" id="marca">
+                            <option value="">Seleccione</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+					<!-- filtrado por descuento-->
+                    <div class="mt-6">
+                        <label for="descuento">Descuento</label>
+                        <select class="" name="descuento" id="descuento">
+                            <option value="">Seleccione</option>
+                            <option value="1">Hasta 10%</option>
+                            <option value="11">De 11% a 20%</option>
+                            <option value="21">De 21% a 30%</option>
+                            <option value="31">De 31% a 40%</option>
+                            <option value="41">De 41% a 50%</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="zona-productos" id="lista-productos">
+        <div class="slider-container-tv cards-productos">
+            <ul class="" id="resultado">
+                <!-- Listado de productos generados dinámicamente -->
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+</body>
