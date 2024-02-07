@@ -27,9 +27,9 @@
     <div class="wrapper">
 
 		<header class="header">
-            <!--Menú navegación. Estructura Bootstrap. -->
             
-			<div class="container">
+            
+			<div class="container"> <!--Menú navegación. Estructura Bootstrap. -->
 				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
 				  <div class="container-fluid">
 					<a class="navbar-brand" href="index2.html">
@@ -64,24 +64,22 @@
 					</div>
 				  </div>
 				</nav>
-			  </div> 
-
 			  
-		</div>
+			</div>
 		</header>
 
         
 	<main>
 
-		<div class="header-sup">
+		<div class="header-sup"> <!-- bienvenida-->
 			<div class="bienvenida text-center my-5">
 				<div class="bienve">Bienvenido <span id="nombre-usuario" class="name"></span></div>
-				
 				<br>
 				<div class="cuenta"><i class="fa-solid fa-user"></i> <button id="open_modal_register">Mi Cuenta</button></div>
 			</div>
-   <!--carrousel de fotos. Bootstrap-->      
-<section class="carrusel">
+		</div>
+       
+<section class="carrusel">  <!--carrousel de fotos. Bootstrap--> 
     <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -120,12 +118,12 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </section>  
+</section>  
 
-<!-- Muestra en cards todos los productos-->        
-  <section class="todos my-5">
+     
+<section class="todos my-5"> <!-- Muestra en cards todos los productos-->   
     <h2 class="text-center my-5">NUESTROS PRODUCTOS</h2>
-
+<!-- Configurar visualización de productos en HOME-->
 	<section class="currency-container my-5">
 		<div class="container">
 			<div class="row align-items-start">
@@ -186,52 +184,56 @@
      <!-- productos en cards-->      
 	<div class="container">
 		<div id="productos" class="row"></div>
-	  </div>
+	</div>
 	
-	  <script src="productos.js"></script>
-	  <script src="main.js"></script>
-	</section>
+	  <script src="./assets/js/productos.js"></script>
+	  <script src="./assets/js/main.js"></script>
 
- </section>
+</section>
+
+
 
 
  
 
-<!-- galeria de marcas-->
-			<section class="marcas">
-				<h2 class="">Marcas Destacadas</h2>
-				<div class="container-marcas">
-					<ul class="">
-						<li>
-							<picture class="">
+<!-- galeria de marcas. Crera un contenedor y meter dentro las imágenes con un flexbox-->
+<section class="marcas">
+	<h2 class="">Marcas Destacadas</h2>
+		<div class="container-marcas">
+			<ul class="">
+				<li>
+					<picture class="">
 								<img width="120" src="assets/img/marcas01.jpg" alt="">
-							</picture>
-						</li>
-						<li>
+					</picture>
+				</li>
+				<li>
 							<picture class="">
 								<img width="120" src="assets/img/marcas02.jpg" alt="">
 							</picture>
-						</li>
-						<li>
+				</li>
+				<li>
 							<picture class="">
 								<img width="120" src="assets/img/marcas03.jpg" alt="">
 							</picture>
-						</li>
-						<li>
+				</li>
+				<li>
 							<picture class="">
 								<img width="120" src="assets/img/marcas04.jpg" alt="">
 							</picture>
-						</li>
-						<li>
+				</li>
+				<li>
 							<picture class="">
 								<img width="120" src="assets/img/marcas05.jpg" alt="">
 							</picture>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<hr>
-			<section class="info content">
+				</li>
+			</ul>
+		</div>
+</section>
+
+<hr>
+			
+<!-- Forma de pago. Crear un pre-footer para meter el contenido-->
+<section class="info content">
 				<div class="cards-info">
 					<div class="card-info">
 						<div class="iconos">
@@ -258,9 +260,10 @@
 						</div> <!-- Fin .contenido -->
 					</div> <!-- Fin .card-info -->
 				</div> <!-- Fin .cards-info -->
-			</section>
-		</main>
-	</div>
+</section>
+</main>
+
+<!-- Footer. Crear Grid con tres columnas para darle el formato-->
 	<footer class="footer">
 		<div class="footer-sup">
 			<div class="identidad">
