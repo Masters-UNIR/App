@@ -64,7 +64,7 @@
 				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
 				  <div class="container-fluid p-2">
 					<a class="navbar-brand" href="index.html">
-					  	<img src="assets/css/img/logo 3.svg" alt="Logo" width="60%">
+					  	<img src="assets/img/logo_3.svg" alt="Logo" width="60%">
 				   	</a>
 					   	<div class="logo mx-2">
 							<h1 class="">Herboristería <span class="marca">La Natural</span></h1>
@@ -107,7 +107,7 @@
 		<main>
             <!-- Slider generado con bootstrap AQUÍ -->
 			<!--carrousel de fotos. Bootstrap-->
-			<section class="carrusel">
+			<!-- <section class="carrusel">
 				<div id="carouselExampleCaptions" class="carousel slide">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -116,21 +116,21 @@
 					</div>
 			 		<div class="carousel-inner">
 				  		<div class="carousel-item active">
-					 		<img src="assets/css/img/hierbas 2.jpg" class="d-block w-100" alt="...">
+					 		<img src="assets/img/hierbas_1.jpg" class="d-block w-100" alt="...">
 			  				<div class="carousel-caption d-none d-md-block">
 								<h3>Hierbas aromáticas</h3>
-								<p>Aprende a consservar tus hierbas en casa</p>
+								<p>Aprende a conservar tus hierbas en casa</p>
 			  				</div>
 						</div>
 						<div class="carousel-item">
-			  				<img src="assets/css/img/hierbas 3.jpeg" class="d-block w-100" alt="...">
+			  				<img src="assets/img/hierbas_2.jpg" class="d-block w-100" alt="...">
 			  				<div class="carousel-caption d-none d-md-block">
 								<h3>Hierbas medicinales</h3>
 								<p>Los básicos para el bienestar en el hogar</p>
 			  				</div>
 						</div>
 						<div class="carousel-item">
-			  				<img src="assets/css/img/hierbas 4.jpg" class="d-block w-100" alt="...">
+			  				<img src="assets/img/hierbas_4.jpg" class="d-block w-100" alt="...">
 			  				<div class="carousel-caption d-none d-md-block">
 								<h3>Recetas</h3>
 								<p>Aprende a preparar tus propios ungüentos</p>
@@ -146,12 +146,12 @@
 						<span class="visually-hidden">Next</span>
 		  			</button>
 				</div>
-	  		</section>
+	  		</section> -->
 
 			<section class="currency-container my-4">
 				<div class="currency text-center my-4">
 					<h2 class=""><label for="currency">Escoja su Divisa</label></h2>
-					<select class="" name="currency" id="currency">
+					<select class="p-2 rounded bg-secondary text-white" name="currency" id="currency">
 						<option value="" selected>Seleccione una Divisa...</option>
 						<option value="ARS">ARS | PESO ARGENTINO</option>
 						<option value="BOB">BOB | BOLIVIANO</option>
@@ -175,9 +175,8 @@
 				<h2 class="">Todos los productos</h2>
 				<div class="ordenar my-2 text-end">
 					<form action="">
-						<label for="ordenar">Ordenar por:</label>
-						<select class="" name="ordenar" id="ordenar">
-							<option value="">Seleccione</option>
+						<select class="p-2 rounded bg-secondary text-white" name="ordenar" id="ordenar">
+							<option selected value="">Ordenar por:</option>
 							<option value="pa">Precio: más bajo el primero</option>
 							<option value="pd">Precio: más alto el primero</option>
 							<option value="na">Nombre: de la A a la Z</option>
@@ -192,9 +191,8 @@
 							<form id="filtros">
 								<div class="precios">
 									<div class="my-2">
-										<label for="precio-min">Precio Mínimo</label>
-										<select class="" name="precio-min" id="precio-min">
-											<option value="">Seleccione</option>
+										<select class="p-2 rounded bg-secondary text-white" name="precio-min" id="precio-min">
+											<option selected value="">Precio Mínimo</option>
 											<option value="2">2€</option>
 											<option value="5">5€</option>
 											<option value="10">10€</option>
@@ -203,9 +201,8 @@
 										</select>
 									</div>
 									<div class="my-2">
-										<label for="precio-max">Precio Máximo</label>
-										<select class="" name="precio-max" id="precio-max">
-											<option value="">Seleccione</option>
+										<select class="p-2 rounded bg-secondary text-white" name="precio-max" id="precio-max">
+											<option selected value="">Precio Máximo</option>
 											<option value="20">20€</option>
 											<option value="25">25€</option>
 											<option value="30">30€</option>
@@ -252,9 +249,8 @@
 										</select>
 									</div>
 									<div class="my-2">
-										<label for="descuento">Descuento</label>
-										<select class="" name="descuento" id="descuento">
-											<option value="">Seleccione</option>
+										<select class="p-2 rounded bg-secondary text-white" name="descuento" id="descuento">
+											<option selected value="">Descuento</option>
 											<option value="1">Hasta 10%</option>
 											<option value="11">De 11% a 20%</option>
 											<option value="21">De 21% a 30%</option>
