@@ -7,15 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
       var card = document.createElement("div");
       card.classList.add("col-md-4", "mb-4");
   
+
+      // El botón abriría una ficha de producto, no diseñada
       var cardContent = `
         <div class="card">
           <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
           <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.descripcion}</p>
+            <p class="card-text">${producto.texto}</p>
             <p class="card-text">Precio: €${producto.preciobaseeu}</p>
             <p class="card-text">Precion con descuento: €${producto.descuento}</p>
-            <a href="#" class="btn btn-primary">Añadir</a>
+            <a href="#" class="btn btn-primary">Leer más</a>
           </div>
         </div>
       `;
