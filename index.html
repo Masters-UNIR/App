@@ -35,9 +35,6 @@
 					<a class="navbar-brand" href="index.html">
 					  <img src="assets/img/logo_3.svg" alt="Logo" width="60%">
 				   </a>
-					<div class="logo">
-						<h1 class="">Herboristería <span class="marca">La Natural</span></h1>
-					</div>
 					<div class="usuario">
 						<p>Bienvenid@ <span id="nombre-usuario"></span></p>
 					</div>
@@ -56,9 +53,7 @@
 						  <li class="nav-item">
 							  <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
 							</li>
-						<!-- <li class="nav-item">
-						  <a class="nav-link" href="register.html">REGISTRO</a>
-						</li> -->
+					
 						<li class="nav-item">
 						  <a class="nav-link" href="carrito.html">
                             <div id="img-carrito" class="carrito">
@@ -80,7 +75,7 @@
 		<div class="header-sup"> <!-- bienvenida-->
 			<div class="bienvenida text-center my-5">
 				<div class="bienve">
-                    <h2>HERBORISTERÍA LA MODERNA</h2>
+                    <h2>HERBORISTERÍA LA NATURAL</h2>
 					<h4>Bienvenid@</h4>
 					<span id="nombre-usuario" class="name"></span>
 				</div>
@@ -133,12 +128,29 @@
      
 <section class="todos my-5"> <!-- Muestra en cards todos los productos-->   
     <h2 class="text-center my-5">NUESTROS PRODUCTOS</h2>
-	
+    <!-- Configurar visualización de productos en HOME-->
+    <section class="currency-container my-5">
+      <div class="container">
+        <div class="row align-items-start">
 
+       <!-- productos en cards-->      
+    <div class="container">
+      <div id="productos" class="row"></div>
+      </div>
+    </div>
+  
+      <script src="productos.js"></script>
+      <script src="main.js"></script>
+    </section>
+      <script src="./assets/js/productos.js"></script>
+      <script src="./assets/js/main.js"></script>
+<!--Uso de componente Cards
     <div class="container">
       <div class="row">
         <div class="col-4">
-           <!--Uso de componente Cards-->
+
+
+           
             <div class="card text-center">
               <img src="assets/img/hierbabuena.jpg" class="card-img-top rounded" height=300>
               <div class="card-body">
@@ -173,6 +185,7 @@
         </div>
       </div>
     </div>
+ -->
     </div>
 
 
