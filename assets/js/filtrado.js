@@ -36,25 +36,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Escucha de eventos para los selects de filtrado
 // Precio mínimo
-minimo.addEventListener('change', e => {
-    datosFiltrado.minimo = e.target.value;
-
-    filtrarProducto();
-});
+if (minimo) {
+    minimo.addEventListener('change', e => {
+        datosFiltrado.minimo = e.target.value;
+    
+        filtrarProducto();
+    });
+}
 
 // Precio máximo
-maximo.addEventListener('change', e => {
-	datosFiltrado.maximo = e.target.value;
-
-	filtrarProducto();
-});
+if (maximo) {
+    maximo.addEventListener('change', e => {
+        datosFiltrado.maximo = e.target.value;
+    
+        filtrarProducto();
+    });
+}
 
 // Descuento
-descuento.addEventListener('change', e => {
-    datosFiltrado.descuento = e.target.value;
-
-    filtrarProducto();
-})
+if (descuento) {
+    descuento.addEventListener('change', e => {
+        datosFiltrado.descuento = e.target.value;
+    
+        filtrarProducto();
+    });
+}
 
 // TODO filtros para categoría, subcategoría y marca
 

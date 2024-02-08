@@ -144,3 +144,11 @@ h1 {
     --bs-btn-disabled-bg: #a8e1c7;
     --bs-btn-disabled-border-color: #a8e1c7;
 }
+
+.navbar-brand {
+    max-width: 200px;
+}
+
+.usuario {
+    margin-left: 2rem;
+}
