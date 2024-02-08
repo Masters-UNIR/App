@@ -1,3 +1,25 @@
+header, footer{
+    background:#a8e1c7;
+}
+.btn{
+    background:#a8e1c7;
+}
+.media{
+    background:#e1f6fa;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+}
+
+.card {
+    min-height: 630px;
+}
+
 .error {
     border: 2px solid red;
 	text-align: center;
@@ -104,4 +126,21 @@
 		width: 64px;
 		height: 64px;
 	}
+}
+
+.btn-info {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #a8e1c7;
+    --bs-btn-border-color: #a8e1c7;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #5cdda3;
+    --bs-btn-hover-border-color: #5cdda3;
+    --bs-btn-focus-shadow-rgb: 11,172,204;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #1bd883;
+    --bs-btn-active-border-color: #5cdda3;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #a8e1c7;
+    --bs-btn-disabled-border-color: #a8e1c7;
 }
