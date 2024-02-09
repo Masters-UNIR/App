@@ -30,7 +30,7 @@
             <!--Menú navegación. Estructura Bootstrap. -->
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
-				  <div class="container-fluid pt-5">
+				  <div class="container-fluid px-5">
 					<a class="navbar-brand" href="index.html">
 					  <img src="assets/img/logo_3.svg" alt="Logo" width="60%">
 				   </a>
@@ -80,27 +80,29 @@
 <!--Productos del carrito-->
           <div class="container">
             <form>
-            <ul>
+            <ul class="list-unstyled">
                 <li class="submenu">
                     <div id="carrito" class="form-group">
+                      <br>
                         <table id="lista-carrito" class="table">
                             <thead>
                                 <tr>
-                                    <th class="">Imagen</th>
-                                    <th class="">Nombre</th>
-                                    <th class="">Precio Unitario</th>
-                                    <th class="">Cantidad</th>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <th class=""></th>
                                     <th class=""></th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
+                            <br>
                             <tfoot>
                                 <tr>
                                     <td colspan="5">Total: <span class="total" id="total"></span> <span class="moneda"></span></td>
                                 </tr>
                             </tfoot>
                         </table>
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-5 mb-5">
                         <a href="#" id="vaciar-carrito" class="btn mx-2">Vaciar Carrito</a>
                         <a href="#" id="finalizar-pedido" class="btn mx-2">Finalizar Pedido</a>
                         </div>
