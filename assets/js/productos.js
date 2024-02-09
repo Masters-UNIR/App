@@ -85,7 +85,7 @@ const productos = [
         presentacion: '300gr.',
         preciobaseeu: 3,
         descuento: 10,
-        imagen: 'assets/img/curcuma.jpg',
+        imagen: 'assets/img/curcuma.webp',
         categoria: ['General'],
         subcategoria: ['Antiinflamatorio'],
         cantidad: 1
