@@ -69,7 +69,7 @@ const productos = [
         presentacion: '',
         preciobaseeu: 8,
         descuento: 10,
-        imagen: 'assets/img/albahaca.jpeg',
+        imagen: 'assets/img/albahaca.jpg',
         categoria: [''],
         subcategoria: [''],
         cantidad: 1
