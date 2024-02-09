@@ -19,7 +19,11 @@ h1 {
 }
 
 .card {
-    min-height: 630px;
+    min-height: 750px;
+}
+
+.card-inicio {
+    min-height: 650px;
 }
 
 .modal-dialog {
