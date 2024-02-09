@@ -105,44 +105,52 @@ function validarFormulario(e) {
 // Entrada de cliente
 function loginCliente(e) {
 	e.preventDefault();
+	//
+	let usuarioLogeado;
+	const usuarioLogeadoExist = usuarios.find((usuario) => usuario.email === emailLogin.value.toLowerCase());
 
     // comprobamos si usuario logeado esta registrado en localStorage
-    usuarioRegistrado = JSON.parse(localStorage.getItem('usuario')) || [];
-    if (usuarioRegistrado !== []) {
+    // usuarioRegistrado = JSON.parse(localStorage.getItem('usuario')) || [];
+    if (usuarioLogeadoExist) {
 
-		const email = usuarioRegistrado[0].email.toLowerCase();
-        const password = usuarioRegistrado[0].password;
-    
-        if (email === emailLogin.value.toLowerCase() && password === passwordLogin.value) {
-            const parrafo = document.createElement('p');
-            parrafo.textContent = 'Nos alegra volverte a ver...';
-            parrafo.classList.add('logeado-ok');
+		usuarioLogeado = usuarios.filter((usuario) => usuario.email === emailLogin.value.toLowerCase());
+	} else {
+		usuarioLogeado = JSON.parse(localStorage.getItem('usuario')) || [];
+	}
+	const email = usuarioLogeado[0].email.toLowerCase();
+	const password = usuarioLogeado[0].password;
 
-            botonEntrar.appendChild(parrafo);
+	if (email === emailLogin.value.toLowerCase() && password === passwordLogin.value) {
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Nos alegra volverte a ver...';
+		parrafo.classList.add('logeado-ok');
 
-            setTimeout(() => {
-                parrafo.remove();
-                formLogin.reset();
+		botonEntrar.appendChild(parrafo);
 
-                iniciar();
-                location.href = "index.html";
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
 
-            }, 2000);
-        } else {
-            const parrafo = document.createElement('p');
-            parrafo.textContent = 'Email o password erroneos';
-            parrafo.classList.add('error');
+			iniciar();
+			localStorage.setItem('usuario', JSON.stringify(usuarioLogeado));
 
-            botonEntrar.appendChild(parrafo);
+			location.href = "index.html";
 
-            setTimeout(() => {
-                parrafo.remove();
-                formLogin.reset();
+		}, 2000);
+	} else {
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Email o password erroneos';
+		parrafo.classList.add('error');
 
-                iniciar();
+		botonEntrar.appendChild(parrafo);
 
-            }, 2000);
-        }
-	}	
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
 
-}
+			iniciar();
+
+		}, 2000);
+	}
+}	
+

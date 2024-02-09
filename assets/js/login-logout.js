@@ -1,4 +1,4 @@
-// Mostramos el usuario regiistrado desde el localStorage
+// Mostramos el usuario registrado desde el localStorage
 document.addEventListener('DOMContentLoaded', () => {
 	usuarioRegistrado = JSON.parse(localStorage.getItem('usuario')) || [];
 	if (usuarioRegistrado !== []) {
@@ -11,9 +11,9 @@ function mostrarUsuario(usuarios) {
 	const nombreUsuario = document.querySelector('#nombre-usuario');
 
 	const nombre = usuarios.map(usuario => usuario.name);
-    const apellidos = usuarios.map(usuario => usuario.surname)
+    const apellidos = usuarios.map(usuario => usuario.surname);
 
-	nombreUsuario.textContent = ` ${nombre} ${apellidos}`;
+	nombreUsuario.textContent = `${nombre}`;
 }
 
 // TODO logout
