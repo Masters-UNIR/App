@@ -112,8 +112,8 @@ const productos = [
         preciobaseeu: 30,
         descuento: 10,
         imagen: 'assets/img/oregano.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        categoria: ['Genérico'],
+        subcategoria: ['Dolor'],
         cantidad: 1
     },
     {
@@ -125,8 +125,8 @@ const productos = [
         preciobaseeu: 40,
         descuento: 10,
         imagen: 'assets/img/kukicha2.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        categoria: ['Sistema Nervioso'],
+        subcategoria: ['Relajante'],
         cantidad: 1
     },
     {
@@ -138,8 +138,8 @@ const productos = [
         preciobaseeu: 25,
         descuento: 10,
         imagen: 'assets/img/matcha.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        categoria: ['Sistema Nervioso'],
+        subcategoria: ['Relajante'],
         cantidad: 1
     },
     {
@@ -151,8 +151,8 @@ const productos = [
         preciobaseeu: 23,
         descuento: 10,
         imagen: 'assets/img/te_verde.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        categoria: ['Sistema Inmune'],
+        subcategoria: ['Defensas'],
         cantidad: 1
     },
 ]
