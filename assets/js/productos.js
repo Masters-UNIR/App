@@ -42,7 +42,7 @@ const productos = [
         productoId: 4,
         nombre: 'Tomillo',
         marca: 'Josenea',
-        texto:'Por sus propiedades antiespasmódica, expectorante y antiséptica, el tomillo está especialmente indicado en el tratamiento de ciertas afecciones de las vías respiratorias altas, particularmente las que cursan con tos irritativa, laringitis, bronquitis, asma, enfisema y gripe.'
+        texto:'Por sus propiedades antiespasmódica, expectorante y antiséptica, el tomillo está especialmente indicado en el tratamiento de ciertas afecciones de las vías respiratorias altas, particularmente las que cursan con tos irritativa, laringitis, bronquitis, asma, enfisema y gripe.',
         presentacion: '300gr.',
         preciobaseeu: 13,
         descuento: 10,
@@ -54,7 +54,7 @@ const productos = [
     {
         productoId: 5,
         nombre: 'Estragón',
-        texto:'El estragón es una planta muy nutritiva que más allá de dar sabor a las comidas, cuida de nuestro organismo. Sobresale por sus propiedades digestivas, especialmente tras ingestas pesadas, al tiempo que regula el tránsito intestinal gracias a su contenido en fibra.'
+        texto:'El estragón es una planta muy nutritiva que más allá de dar sabor a las comidas, cuida de nuestro organismo. Sobresale por sus propiedades digestivas, especialmente tras ingestas pesadas, al tiempo que regula el tránsito intestinal gracias a su contenido en fibra.',
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 14,
@@ -67,7 +67,7 @@ const productos = [
     {
         productoId: 6,
         nombre: 'Albahaca',
-        texto:'La albahaca es muy rica en calcio, básico para reforzar huesos y dientes, y potasio, que regula el contenido de agua de las células y su movimiento, además de moderar el sistema nervioso y muscular e intervenir en la construcción de proteínas.'
+        texto:'La albahaca es muy rica en calcio, básico para reforzar huesos y dientes, y potasio, que regula el contenido de agua de las células y su movimiento, además de moderar el sistema nervioso y muscular e intervenir en la construcción de proteínas.',
         marca: 'Artemis',
         presentacion: '300gr.',
         preciobaseeu: 8,
@@ -80,7 +80,7 @@ const productos = [
     {
         productoId: 7,
         nombre: 'Curcuma',
-        texto:'Es un potente antiinflamatorio es útil para tratar el dolor y las enfermedades inflamatorias: artritis, artrosis, enfermedad periodontal, etc. Previene el parkinson y el alzhéimer. Es útil para tratar las enfermedades gastrointestinales, como la fibrosis hepática y la enfermedad inflamatoria intestinal.'
+        texto:'Es un potente antiinflamatorio es útil para tratar el dolor y las enfermedades inflamatorias: artritis, artrosis, enfermedad periodontal, etc. Previene el parkinson y el alzhéimer. Es útil para tratar las enfermedades gastrointestinales, como la fibrosis hepática y la enfermedad inflamatoria intestinal.',
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 3,
@@ -93,7 +93,7 @@ const productos = [
     {
         productoId: 8,
         nombre: 'Jengibre',
-        texto:'Tiene potentes propiedades antisépticas, antioxidantes, expectorantes, antiinflamatorias y antimicrobianas; además de gran contenido de hierro, vitamina C y polifenoles, entre otros. El jingerol estimula la transpiración y la circulación sanguínea, dando energía al cuerpo y promoviendo la desintoxicación del mismo.'
+        texto:'Tiene potentes propiedades antisépticas, antioxidantes, expectorantes, antiinflamatorias y antimicrobianas; además de gran contenido de hierro, vitamina C y polifenoles, entre otros. El jingerol estimula la transpiración y la circulación sanguínea, dando energía al cuerpo y promoviendo la desintoxicación del mismo.',
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 20,
@@ -106,7 +106,7 @@ const productos = [
     {
         productoId: 9,
         nombre: 'Oregano',
-        texto:'Sus propiedades medicinales (alto contenido en minerales y ácidos) ayudan a disminuir dolores de cabeza, estómago, garganta, articulaciones y muelas. Contribuyen igualmente a prevenir problemas cardíacos, digestivos y de estreñimiento. Asimismo, alivian la tos, asma y resfriados.'
+        texto:'Sus propiedades medicinales (alto contenido en minerales y ácidos) ayudan a disminuir dolores de cabeza, estómago, garganta, articulaciones y muelas. Contribuyen igualmente a prevenir problemas cardíacos, digestivos y de estreñimiento. Asimismo, alivian la tos, asma y resfriados.',
         marca: 'Artemis',
         presentacion: '300gr.',
         preciobaseeu: 30,
@@ -132,7 +132,7 @@ const productos = [
     {
         productoId: 11,
         nombre: 'Té matcha',
-        texto: 'Los componentes del té matcha aportan varios beneficios al organismo: Suministra energía evitando el nerviosismo. Puede reducir la ansiedad y el estrés. Mejora el estado de la piel, las uñas y los tejidos'
+        texto: 'Los componentes del té matcha aportan varios beneficios al organismo: Suministra energía evitando el nerviosismo. Puede reducir la ansiedad y el estrés. Mejora el estado de la piel, las uñas y los tejidos',
         marca: 'Yogi tea',
         presentacion: '300gr.',
         preciobaseeu: 25,
@@ -145,7 +145,7 @@ const productos = [
     {
         productoId: 12,
         nombre: 'Té verde',
-        texto:'Previene el envejecimiento y fortalece el sistema de defensas del ser humano.- Contribuye a regular el proceso de digestión y regula los niveles de colesterol. Evita la formación coágulos en la sangre.'
+        texto:'Previene el envejecimiento y fortalece el sistema de defensas del ser humano.- Contribuye a regular el proceso de digestión y regula los niveles de colesterol. Evita la formación coágulos en la sangre.',
         marca: 'Yogi tea',
         presentacion: '300gr.',
         preciobaseeu: 23,
