@@ -42,7 +42,7 @@ const productos = [
         productoId: 4,
         nombre: 'Tomillo',
         marca: 'Josenea',
-        texto:'Por sus propiedades antiespasmódica, expectorante y antiséptica, el tomillo está especialmente indicado en el tratamiento de ciertas afecciones de las vías respiratorias altas, particularmente las que cursan con tos irritativa, laringitis, bronquitis, asma, enfisema y gripe.',
+        texto:'Propiedades antiespasmódica, expectorante y antiséptica, está especialmente indicado en el tratamiento de ciertas afecciones de las vías respiratorias altas, particularmente las que cursan con tos irritativa, laringitis, bronquitis, asma, enfisema y gripe.',
         presentacion: '300gr.',
         preciobaseeu: 13,
         descuento: 10,
