@@ -150,7 +150,7 @@ const productos = [
         presentacion: '300gr.',
         preciobaseeu: 23,
         descuento: 10,
-        imagen: 'assets/img/te_verde.jpg',
+        imagen: 'assets/img/te_verde.webp',
         categoria: ['Sistema Inmune'],
         subcategoria: ['Defensas'],
         cantidad: 1
