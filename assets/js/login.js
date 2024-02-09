@@ -109,13 +109,32 @@ function loginCliente(e) {
 	let usuarioLogeado;
 	const usuarioLogeadoExist = usuarios.find((usuario) => usuario.email === emailLogin.value.toLowerCase());
 
-    // comprobamos si usuario logeado esta registrado en localStorage
-    // usuarioRegistrado = JSON.parse(localStorage.getItem('usuario')) || [];
+	let usuarioStorageExist;
+	if (JSON.parse(localStorage.getItem('usuario'))) {
+		usuarioStorageExist = JSON.parse(localStorage.getItem('usuario')).find((usuario) => usuario.email === emailLogin.value.toLowerCase());
+	}
+
     if (usuarioLogeadoExist) {
 
 		usuarioLogeado = usuarios.filter((usuario) => usuario.email === emailLogin.value.toLowerCase());
+	} else if (usuarioStorageExist){
+		usuarioLogeado = JSON.parse(localStorage.getItem('usuario'));
 	} else {
-		usuarioLogeado = JSON.parse(localStorage.getItem('usuario')) || [];
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Email o password erroneos';
+		parrafo.classList.add('error');
+
+		botonEntrar.appendChild(parrafo);
+
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
+
+			iniciar();
+
+		}, 2000);
+
+		return;
 	}
 	const email = usuarioLogeado[0].email.toLowerCase();
 	const password = usuarioLogeado[0].password;
