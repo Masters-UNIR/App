@@ -15,7 +15,7 @@ const productos = [
     {
         productoId: 2,
         nombre: 'Lavanda',
-        texto: 'La lavanda actúa como tranquilizante ante estados emocionales de nerviosismo y además ayuda a conciliar el sueño.',
+        texto: 'La lavanda actúa como tranquilizante ante estados emocionales de nerviosismo. Su aroma te tranquilizará y ayudará a conciliar el sueño.',
         marca: 'Soria Natural',
         presentacion: '400gr.',
         preciobaseeu: 11,

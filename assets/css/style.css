@@ -5,7 +5,7 @@ header, footer{
     background:#a8e1c7;
 }
 .media{
-    background:#e1f6fa;
+    background:#a8e1c7;
 }
 
 h1 {
@@ -74,7 +74,7 @@ h1 {
     left: 50%;
     z-index: -10;
     position: relative;
-    background-color: #66cb52;
+    background-color: #a8e1c7;
 }
 
 .fa-chevron-up {
@@ -143,12 +143,4 @@ h1 {
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: #a8e1c7;
     --bs-btn-disabled-border-color: #a8e1c7;
-}
-
-.navbar-brand {
-    max-width: 200px;
-}
-
-.usuario {
-    margin-left: 2rem;
 }
