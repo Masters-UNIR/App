@@ -62,7 +62,33 @@ if (descuento) {
     });
 }
 
-// TODO filtros para categoría, subcategoría y marca
+// Marca
+if (marca) {
+    marca.addEventListener('change', e => {
+        datosFiltrado.marca = e.target.value;
+
+        filtrarProducto();
+    });
+}
+
+// Categoria
+if (categoria) {
+    categoria.addEventListener('change', e => {
+        datosFiltrado.categoria = e.target.value;
+    
+        filtrarProducto();
+        cargarSubcategorias();
+    });
+}
+
+// Subcategoria
+if (subcategoria) {
+    subCategoria.addEventListener('change', e => {
+        datosFiltrado.subCategoria = e.target.value;
+    
+        filtrarProducto();
+    });
+}
 
 // Evento para la ordenación
 ordenar.addEventListener('change', ordenarProductos);
@@ -190,9 +216,71 @@ function mostrarProductos(productos, rate, currencySymbol) {
     });
 }
 
+// Cargar las categorías de forma dinámica en el select correspondiente
+function cargarCategorias() {
+	const categorias = ["Sistema Nervioso", "Sistema Digestivo", "Sistema Inmune", "Sistema Respiratorio", "Sistema Circulatorio", "Sistema Renal", "Sistema Óseo y Articular", "Sistema Hormonal", "Sistema Reproductor", "Nutricosmética", "Vitaminas, Minerales y Aminoácidos", "Genérico", "General"];
+
+	categorias.sort();
+
+	addOptions(categorias);
+}
+
+//Agrega options a un select
+function addOptions(array) {
+	// const selector = document.getElementsByName(domElement)[0];
+	for (let i = 0; i < array.length; i++) {
+		const opcion = document.createElement('option');
+		opcion.value = array[i];
+		opcion.textContent = array[i];
+		categoria.appendChild(opcion);
+	}
+}
+
+// cargar subcategorias de forma dinamica al cargar la categoria
+function cargarSubcategorias() {
+	// Objeto de ategorías con subcategorías
+	const listaSubcategorias = {
+		'Sistema Nervioso': ["Imsonio", "Relajante", "Falta de Ánimo", "Energizantes", "Dolor de Cabeza", "Regulador"],
+		'Sistema Digestivo': ["Transito Intestinal", "Digestivo", "Antiácidos", "Gases", "Flora Intestinal", "Parásitos Intestinales", "Enzimas Digestivos"],
+		'Sistema Inmune': ["Jalea Real", "Alergias", "Echináceas y Propóleos", "Defensas", "Cándidas y Hongos"],
+		'Sistema Respiratorio': ["Molestias Garganta", "Antitusivos", "Mucolíticos", "Afecciones Respiratorias", "Respiratorio"],
+		'Sistema Circulatorio': ["Rendimiento Intelectual", "Exceso de Azucar", "Colesterol", "Varices y Piernas Cansadas", "Salud Cardiovascular", "Hemorroides", "Tensión Arterial", "Anemias"],
+		'Sistema Renal': ["Diuréticos", "Próstata", "Infecciones", "Cálculos", "Pérdidas de Orina"],
+		'Sistema Óseo y Articular': ["Antiinflamatorio", "Huesos", "Articulaciones", "Cartílago de Tiburón", "Cremas y Hunguentos", "Dolor"],
+		'Sistema Hormonal': ["Menopausia", "Menstruación", "Tiroides"],
+		'Sistema Reproductor': ["Estimulantes sexuales", "Embarazo y Lactancia"],
+		'Nutricosmética': ["Cuidado del Pelo y Uñas", "Cuidado de la Piel"],
+		'Vitaminas, Minerales y Aminoácidos': ["Vitaminas", "Minerales", "Complejos Multinutriéntes", "Aminoácidos", "Oligoelementos"],
+        'General': ["Antiinflamatorio"],
+        'Genérico': ["Dolor"]
+	};
+
+	let categoriaSeleccionada = categoria.value
+	// limpiar subcategorias
+	subCategoria.innerHTML = `<option value="">Seleccione</option>`;
+
+	if (categoriaSeleccionada !== '') {
+		// Se seleccionan las subcategorias y se ordenan
+		categoriaSeleccionada = listaSubcategorias[categoriaSeleccionada];
+		categoriaSeleccionada.sort();
+
+		// Insertamos las subcategorias
+		categoriaSeleccionada.forEach(function (subcategoria) {
+			const opcion = document.createElement('option');
+			opcion.value = subcategoria;
+			opcion.textContent = subcategoria;
+			subCategoria.appendChild(opcion);
+		});
+	}
+
+}
+
+// Iniciar la carga de dategorias
+cargarCategorias();
+
 // Filtrar productos en base a filtros
 function filtrarProducto() {
-    resultadoFiltrado = productos.filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarDescuento);
+    resultadoFiltrado = productos.filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarDescuento).filter(filtrarMarca).filter(filtrarCategoria).filter(filtrarSubcategoria);
 
     // comprobamos que hay resultados de los filtros
     if (resultadoFiltrado.length) {
@@ -270,4 +358,31 @@ function filtrarDescuento(producto) {
         return ((producto.descuento >= descuento) && (producto.descuento <= (descuento + 9)));
     }
     return producto;
+}
+
+function filtrarMarca(producto) {
+	const { marca } = datosFiltrado;
+
+	if (marca) {
+		return producto.marca === marca;
+	}
+	return producto;
+}
+
+function filtrarCategoria(producto) {
+	const { categoria } = datosFiltrado;
+
+	if (categoria) {
+		return producto.categoria.indexOf(categoria) >= 0;
+	}
+	return producto;
+}
+
+function filtrarSubcategoria(producto) {
+	const { subCategoria } = datosFiltrado;
+
+	if (subCategoria) {
+		return producto.subcategoria.indexOf(subCategoria) >= 0;
+	}
+	return producto;
 }
