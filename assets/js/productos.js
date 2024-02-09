@@ -119,7 +119,7 @@ const productos = [
     {
         productoId: 10,
         nombre: 'Té kukicha',
-        texto: 'El té kukicha es uno de los preferidos por los japoneses para acompañar el sushi. Al contener los tallos y ramitas menos teína que las hojas, el té kukicha es menos estimulante que otros tés verdes, esto lo hace una gran opción como té para tomar antes de dormir o para personas mayores.'
+        texto: 'El té kukicha es uno de los preferidos por los japoneses para acompañar el sushi. Al contener los tallos y ramitas menos teína que las hojas, el té kukicha es menos estimulante que otros tés verdes, esto lo hace una gran opción como té para tomar antes de dormir o para personas mayores.',
         marca: 'Yogi Tea',
         presentacion: '300gr.',
         preciobaseeu: 40,
