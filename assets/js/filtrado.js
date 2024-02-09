@@ -257,7 +257,7 @@ function cargarSubcategorias() {
 
 	let categoriaSeleccionada = categoria.value
 	// limpiar subcategorias
-	subCategoria.innerHTML = `<option value="">Seleccione</option>`;
+	subCategoria.innerHTML = `<option value="">Subcategoría</option>`;
 
 	if (categoriaSeleccionada !== '') {
 		// Se seleccionan las subcategorias y se ordenan
