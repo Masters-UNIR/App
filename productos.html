@@ -25,76 +25,50 @@
 <body>
     <div class="wrapper">
 
-		<header class="header">
+		<div class="wrapper">
 
-			<!-- Este deveria ser el header principal y debajo tener un menu nav-->
-
-			<div class="header-inf">
+			<header class="header">
+				<!--Menú navegación. Estructura Bootstrap. -->
 				
-				<ul style="display: none;">
-					<li class="submenu">
+				<div class="container-fluid">
+					<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
+					  <div class="container-fluid px-5">
+						  <a class="navbar-brand" href="index.html">
+						  <img src="assets/img/logo_3.svg" alt="Logo" width="60%">
+						</a>
 						
-						<div id="carrito" class="">
-
-							<table id="lista-carrito" class="">
-								<thead>
-									<tr>
-										<th class="">Imagen</th>
-										<th class="">Nombre</th>
-										<th class="">Precio Unitario</th>
-										<th class="">Cantidad</th>
-										<th class=""></th>
-									</tr>
-								</thead>
-								<tbody><!-- Aquí se añaden los productos al carrito dinámicamente --></tbody>
-								<tfoot>
-									<tr>
-										<td colspan="5">Total: <span class="" id="total"></span><span class="moneda"></span></td>
-									</tr>
-								</tfoot>
-							</table>
-							<a href="#" id="vaciar-carrito" class="">Vaciar Carrito</a>
-							<a href="#" id="finalizar-pedido" class="">Finalizar Pedido</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarScroll">
+						  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+							<li class="nav-item">
+							  <a class="nav-link" aria-current="page" href="index.html">INICIO</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="productos.html">PRODUCTOS</a>
+							  </li>
+	
+							  <li class="nav-item" id="login-logout">
+								  <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+								</li>
+						
+							<li class="nav-item">
+							  <a class="nav-link" href="carrito.html">
+								<div id="img-carrito" class="carrito">
+								<i class="fa-solid fa-cart-shopping">
+									<span class="contador-carrito" id="contador-carrito"> 0 </span>
+								</i> 
+								</div>
+					<div id="carrito" class=""></div>
+								</a>
+							</li>
+						  </ul>
 						</div>
-					</li>
-				</ul>
-			</div>
-
-			<div class="container-fluid">
-				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
-				  <div class="container-fluid px-5">
-					<a class="navbar-brand" href="index.html">
-					  	<img src="assets/img/logo_3.svg" alt="Logo" width="60%">
-				   	</a>
-					   	
-					<div class="collapse navbar-collapse" id="navbarScroll">
-					  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-						<li class="nav-item">
-						  <a class="nav-link" aria-current="page" href="index.html">INICIO</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="productos.html">PRODUCTOS</a>
-						  </li>
-						<li class="nav-item" id="login-logout">
-						  <a class="nav-link" aria-current="page" href="login.html">LOGIN</a>
-						</li>
-						
-						<li class="nav-item">
-						  <a class="nav-link" href="carrito.html">
-                            <div id="img-carrito" class="carrito">
-							<i class="fa-solid fa-cart-shopping">
-								<span class="contador-carrito" id="contador-carrito"> 0 </span>
-							</i> 
-                            </div>
-                            </a>
-						</li>
-					  </ul>
-					</div>
-				  </div>
-				</nav>
-		
-			  </div> 
-		</header>
+					  </div>
+					</nav>		  
+				</div>
+			</header>
 
 		<main>
 			<div class="header-sup"> <!-- bienvenida-->
@@ -107,9 +81,16 @@
 				  <br>
 				</div>
 			  </div>
-			<section class="currency-container my-4">
-				<div class="currency text-center my-4">
-					<h2 class=""><label for="currency">Escoja su Divisa</label></h2>
+
+
+		<!-- Personalizar visualización de productos-->	  
+		
+		
+		<section class="currency-container my-4">
+			<div class="row">
+				<!-- Selección de moneda-->
+				<div class="col-6 justify-content-center">
+				<div class="currency text-center">
 					<select class="p-2 rounded bg-secondary text-white" name="currency" id="currency">
 						<option value="" selected>Seleccione una Divisa...</option>
 						<option value="ARS">ARS | PESO ARGENTINO</option>
@@ -128,11 +109,10 @@
 						<option value="VES">VES | BOLIVAR VENEZOLANO</option>
 					</select>
 				</div>
-			</section>
-			<hr>
-			<section class="todos my-2 container">
-				
-				<div class="ordenar my-2 text-end">
+				</div>
+				<!-- Ordenar-->
+				<div class="col-6 justify-content-center">
+				<div class="ordenar text-center">
 					<form action="">
 						<select class="p-2 rounded bg-secondary text-white" name="ordenar" id="ordenar">
 							<option selected value="">Ordenar por:</option>
@@ -143,14 +123,20 @@
 						</select>
 					</form>
 				</div>
+			</div>
+			</div>
+			</section>
+			
+			
+			<section class="todos my-2 container">
 				<div class="todos-productos my-2">
 					<div class="zona-filtros">
 						<h4 class="filtros">Filtros</h4>
 						<div class="contenedor-filtros">
 							<form id="filtros">
 								<div class="precios">
-									<div class="my-2">
-										<select class="p-2 rounded bg-secondary text-white" name="precio-min" id="precio-min">
+									<div class="btn-group my-2" role="group">
+										<select class="btn btn-secondary dropdown-toggle" name="precio-min" id="precio-min">
 											<option selected value="">Precio Mínimo</option>
 											<option value="2">2€</option>
 											<option value="5">5€</option>
@@ -159,8 +145,8 @@
 											<option value="20">20€</option>
 										</select>
 									</div>
-									<div class="my-2">
-										<select class="p-2 rounded bg-secondary text-white" name="precio-max" id="precio-max">
+									<div class="btn-group my-2" role="group">
+										<select class="btn btn-secondary dropdown-toggle" name="precio-max" id="precio-max">
 											<option selected value="">Precio Máximo</option>
 											<option value="20">20€</option>
 											<option value="25">25€</option>
@@ -171,44 +157,32 @@
 									</div>
 								</div>
 								<div class="categorias">
-									<div class="my-2">
-										<label for="categoria">Categoría</label>
-										<select class="" name="categoria" id="categoria">
+									<div class="btn-group my-2" role="group">
+										<label for="categoria" class="btn btn-secondary">Categoría</label>
+										<select class="btn btn-secondary dropdown-toggle" name="categoria" id="categoria">
 											<option value="">Seleccione</option>
 											<!-- Se cargan dinamicamente -->
 										</select>
 									</div>
-									<div class="my-2">
-										<label for="subcategoria">Subcategoría</label>
-										<select class="" name="subcategoria" id="subcategoria">
+									<div class="btn-group my-2" role="group">
+										<label for="subcategoria" class="btn btn-secondary">Subcategoría</label>
+										<select class="btn btn-secondary dropdown-toggle" name="subcategoria" id="subcategoria">
 											<option value="">Seleccione</option>
 											<!-- generados dinámicamente a partir de la categoría seleccionada -->
 										</select>
 									</div>
 								</div>
 								<div class="marcas">
-									<div class="my-2">
-										<label for="marca">Marca</label>
-										<select class="" name="marca" id="marca">
+									<div class="btn-group my-2" role="group">
+										<label for="marca" class="btn btn-secondary">Marca</label>
+										<select class="btn btn-secondary dropdown-toggle" name="marca" id="marca">
 											<option value="">Seleccione</option>
 											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
-											<option value=""></option>
+											<!-- Opciones de marca -->
 										</select>
 									</div>
-									<div class="my-2">
-										<select class="p-2 rounded bg-secondary text-white" name="descuento" id="descuento">
+									<div class="btn-group my-2" role="group">
+										<select class="btn btn-secondary dropdown-toggle" name="descuento" id="descuento">
 											<option selected value="">Descuento</option>
 											<option value="1">Hasta 10%</option>
 											<option value="11">De 11% a 20%</option>
@@ -221,6 +195,7 @@
 							</form>
 						</div>
 					</div>
+					
 					<div class="zona-productos my-4" id="lista-productos">
 						<div class="slider-container-tv cards-productos container">
 							<ul class="row list-unstyled" id="resultado">
@@ -231,180 +206,173 @@
 					</div>
 				</div>
 			</section>
-			<hr>
-			<section class="marcas">
-				<h2 class="">Marcas Destacadas</h2>
-				<div class="container-marcas">
-					<ul class="">
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas01.jpg" alt="">
-							</picture>
-						</li>
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas02.jpg" alt="">
-							</picture>
-						</li>
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas03.jpg" alt="">
-							</picture>
-						</li>
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas04.jpg" alt="">
-							</picture>
-						</li>
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas05.jpg" alt="">
-							</picture>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<hr>
-<!-- Forma de pago.-->
-<section class="info content pt-5 pb-5"  style="background-color: #a8e1c7">
-	<div class="container">
-	  <div class="row">
-		<div class="col-6 col-md-4 text-center">
-		  <div class="card-info">
-			<div class="iconos">
-			  <i class="fas fa-credit-card"></i>
-			</div>
-			<div class="contenido">
-			  <p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
-			</div>
-		  </div>
-		</div>
-		<div class="col-6 col-md-4 text-center">
-		  <div class="card-info">
-			<div class="iconos2">
-			  <i class="fas fa-comments"></i>
-			</div>
-			<div class="contenido">
-			  <p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
-			</div>
-		  </div>
-		</div>
-		<div class="col-6 col-md-4 text-center">
-		  <div class="card-info">
-			<div class="iconos3">
-			  <i class="fas fa-truck"></i>
-			</div>
-			<div class="contenido">
-			  <p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
-  </section>
-  </main>
-  <!--footer-->
-  
-	  <footer class="text-center text-lg-start text-white" style="background-color: #30363a">
-  
-	  <section class="links pt-5">
-		<div class="container text-center text-md-start mt-5">
-		  <div class="row mt-3">
-			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-			  <h6 class="text-uppercase fw-bold">LA NATURAL</h6>
-			  <hr class="mb-4 mt-0 d-inline-block mx-auto"
-				  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
-				  <p> LA NATURAL te ofrece los mejores productos naturales para tu bienestar</p>
-			   <div class="iconos_redes text-center">
-				<a class="icon-link" href="#">
-				  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-					<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-				  </svg>
-				</a>
-				<a class="icon-link" href="#">
-				  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-					<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-				  </svg>
-				</a>
-				<a class="icon-link" href="#">
-				  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-				  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-				  </svg>
-				</a>
-			   </div>
-			</div>
+	
 		
-			<!-- Grid column 2-->
-			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-  
-			  <h6 class="text-uppercase fw-bold">SOBRE NOSOTROS</h6>
-			  <hr class="mb-4 mt-0 d-inline-block mx-auto"
-				  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
-			  <p>
-				<a href="#!" class="text-white">Conócenos</a>
-			  </p>
-			  <p>
-				<a href="#!" class="text-white">Política de privacidad</a>
-			  </p>
-			  <p>
-				<a href="#!" class="text-white">Política de cookies</a>
-			  </p>
-			  <p>
-				<a href="#!" class="text-white">Condiciones generales de venta</a>
-			  </p>
+
+			 <!-- marcas destacadas -->
+			 <section class="tmarcas my-5">  
+				<h2 class="text-center my-5">NUESTRAS MARCAS</h2>
+					  <div class="container-marcas">
 			  
+						  <div class="container">
+				  <div class="row">
+					<div class="col-md-3">
+					  <img src="./assets/img/josenea_logo.png" class="img-fluid" alt="Imagen 1" style="max-width: 200px; max-height: 200px;">
+					</div>
+					<div class="col-md-3">
+					  <img src="./assets/img/sorianatural.png" class="img-fluid" alt="Imagen 2" style="max-width: 200px; max-height: 200px;">
+					</div>
+					<div class="col-md-3">
+					  <img src="./assets/img/artemis.jpg" class="img-fluid" alt="Imagen 3" style="max-width: 200px; max-height: 200px;">
+					</div>
+					<div class="col-md-3">
+					  <img src="./assets/img/logo-yogi-tea.gif" class="img-fluid" alt="Imagen 4" style="max-width: 200px; max-height: 200px;">
+					</div>
+				  </div>
+				</div>          
+			  </div>
+	  </section>
+	  
+				  
+	  <!-- Forma de pago.-->
+	  <section class="info content pt-5 pb-5"  style="background-color: #a8e1c7">
+		<div class="container">
+		  <div class="row">
+			<div class="col-6 col-md-4 text-center">
+			  <div class="card-info">
+				<div class="iconos">
+				  <i class="fas fa-credit-card"></i>
+				</div>
+				<div class="contenido">
+				  <p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
+				</div>
+			  </div>
 			</div>
-  
-			<!-- Grid column 3-->
-			<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-			
-			  <h6 class="text-uppercase fw-bold">CONSULTA TUS DUDAS</h6>
-			  <hr class="mb-4 mt-0 d-inline-block mx-auto"
-				  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
-			  <p>
-				<a href="#!" class="text-white">Preguntas frecuentes</a>
-			  </p>
-			  <p>
-				<a href="#!" class="text-white">Política de envíos</a>
-			  </p>
-			  <p>
-				<a href="#!" class="text-white">Ayuda</a>
-			  </p>
+			<div class="col-6 col-md-4 text-center">
+			  <div class="card-info">
+				<div class="iconos2">
+				  <i class="fas fa-comments"></i>
+				</div>
+				<div class="contenido">
+				  <p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
+				</div>
+			  </div>
 			</div>
-		   
-  
-			<!-- Grid column 4-->
-  
-			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-			 
-			  <!-- Links --->
-			  <h6 class="text-uppercase fw-bold">CONTACTO</h6>
-			  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #a8e1c7; height: 2px"/>
-			  <p><i class="fas fa-home mr-3"></i> Iparraguirre 2, 48009 BILBAO</p>
-			  <p><i class="fas fa-envelope mr-3"></i> info@LANATURAL.com</p>
-			  <p><i class="fas fa-phone mr-3"></i> + 34 666 999 66</p>
-			  <p><i class="fas fa-print mr-3"></i> + 34 666 999 69</p>
+			<div class="col-6 col-md-4 text-center">
+			  <div class="card-info">
+				<div class="iconos3">
+				  <i class="fas fa-truck"></i>
+				</div>
+				<div class="contenido">
+				  <p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
+				</div>
+			  </div>
 			</div>
 		  </div>
 		</div>
 	  </section>
-	
-  
-	  <!-- Copyright -->
-	  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2024 Copyright:
-		<a class="text-white" href="#">LA NATURAL</a>
-	  </div>
-  </footer>
-  
-	  </div>
-  
-  </html>
-	  <!-- Botón volver arriba -->
-	  <div class="go-top-container">
-		  <div class="go-top-button">
-			  <i class="fa-solid fa-chevron-up"></i>
+	  </main>
+	  <!--footer-->
+	  
+		  <footer class="text-center text-lg-start text-white" style="background-color: #30363a">
+	  
+		  <section class="links pt-5">
+			<div class="container text-center text-md-start mt-5">
+			  <div class="row mt-3">
+				<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+				  <h6 class="text-uppercase fw-bold">LA NATURAL</h6>
+				  <hr class="mb-4 mt-0 d-inline-block mx-auto"
+					  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
+					  <p> LA NATURAL te ofrece los mejores productos naturales para tu bienestar</p>
+				   <div class="iconos_redes text-center">
+					<a class="icon-link" href="#">
+					  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+						<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+					  </svg>
+					</a>
+					<a class="icon-link" href="#">
+					  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+						<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+					  </svg>
+					</a>
+					<a class="icon-link" href="#">
+					  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+					  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+					  </svg>
+					</a>
+				   </div>
+				</div>
+			
+				<!-- Grid column 2-->
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+	  
+				  <h6 class="text-uppercase fw-bold">SOBRE NOSOTROS</h6>
+				  <hr class="mb-4 mt-0 d-inline-block mx-auto"
+					  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
+				  <p>
+					<a href="#!" class="text-white">Conócenos</a>
+				  </p>
+				  <p>
+					<a href="#!" class="text-white">Política de privacidad</a>
+				  </p>
+				  <p>
+					<a href="#!" class="text-white">Política de cookies</a>
+				  </p>
+				  <p>
+					<a href="#!" class="text-white">Condiciones generales de venta</a>
+				  </p>
+				  
+				</div>
+	  
+				<!-- Grid column 3-->
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+				
+				  <h6 class="text-uppercase fw-bold">CONSULTA TUS DUDAS</h6>
+				  <hr class="mb-4 mt-0 d-inline-block mx-auto"
+					  style="width: 60px; background-color: #a8e1c7; height: 2px"/>
+				  <p>
+					<a href="#!" class="text-white">Preguntas frecuentes</a>
+				  </p>
+				  <p>
+					<a href="#!" class="text-white">Política de envíos</a>
+				  </p>
+				  <p>
+					<a href="#!" class="text-white">Ayuda</a>
+				  </p>
+				</div>
+			   
+	  
+				<!-- Grid column 4-->
+	  
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+				 
+				  <!-- Links --->
+				  <h6 class="text-uppercase fw-bold">CONTACTO</h6>
+				  <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #a8e1c7; height: 2px"/>
+				  <p><i class="fas fa-home mr-3"></i> Iparraguirre 2, 48009 BILBAO</p>
+				  <p><i class="fas fa-envelope mr-3"></i> info@LANATURAL.com</p>
+				  <p><i class="fas fa-phone mr-3"></i> + 34 666 999 66</p>
+				  <p><i class="fas fa-print mr-3"></i> + 34 666 999 69</p>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		
+	  
+		  <!-- Copyright -->
+		  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)"> © 2024 Copyright:
+			<a class="text-white" href="#">LA NATURAL</a>
 		  </div>
-	  </div>
+	  </footer>
+	  
+		 
+	 
+		  <!-- Botón volver arriba -->
+		  <div class="go-top-container">
+			  <div class="go-top-button">
+				  <i class="fa-solid fa-chevron-up"></i>
+			  </div>
+		  </div>
   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
