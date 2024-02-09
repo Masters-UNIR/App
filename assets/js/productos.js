@@ -72,7 +72,7 @@ const productos = [
         presentacion: '300gr.',
         preciobaseeu: 8,
         descuento: 10,
-        imagen: 'assets/img/albahaca.webp',
+        imagen: 'assets/img/albahaca.jpg',
         categoria: ['Sistema Nervioso'],
         subcategoria: ['Regulador'],
         cantidad: 1
