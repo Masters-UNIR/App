@@ -79,28 +79,28 @@ const productos = [
     },
     {
         productoId: 7,
-        nombre: 'g',
-        texto:
+        nombre: 'Curcuma',
+        texto:'Es un potente antiinflamatorio es útil para tratar el dolor y las enfermedades inflamatorias: artritis, artrosis, enfermedad periodontal, etc. Previene el parkinson y el alzhéimer. Es útil para tratar las enfermedades gastrointestinales, como la fibrosis hepática y la enfermedad inflamatoria intestinal.'
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 3,
         descuento: 10,
-        imagen: 'assets/img/prod7.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        imagen: 'assets/img/curcuma.jpg',
+        categoria: ['General'],
+        subcategoria: ['Antiinflamatorio'],
         cantidad: 1
     },
     {
         productoId: 8,
-        nombre: 'h',
-        texto:
+        nombre: 'Jengibre',
+        texto:'Tiene potentes propiedades antisépticas, antioxidantes, expectorantes, antiinflamatorias y antimicrobianas; además de gran contenido de hierro, vitamina C y polifenoles, entre otros. El jingerol estimula la transpiración y la circulación sanguínea, dando energía al cuerpo y promoviendo la desintoxicación del mismo.'
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 20,
         descuento: 10,
-        imagen: 'assets/img/prod8.jpg',
-        categoria: [''],
-        subcategoria: [''],
+        imagen: 'assets/img/jengibre.jpg',
+        categoria: ['General'],
+        subcategoria: ['Antiinflamatorio'],
         cantidad: 1
     },
     {
