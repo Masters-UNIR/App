@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
                       <p class="card-text">${producto.texto}</p>
                       <p class="card-text">Precio: €${producto.preciobaseeu}</p>
                       <p class="card-text">Descuento: ${producto.descuento}%</p>
-                      <a href="#" class="btn btn-info text-center">Leer más</a>
+                  </div>
+                  <div class="card-footer">
+                    <a href="#" class="btn btn-info text-center">Leer más</a>
                   </div>
               </div>
           `;
