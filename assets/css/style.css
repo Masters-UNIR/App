@@ -174,3 +174,7 @@ h1 {
     --bs-btn-disabled-bg: #a8e1c7;
     --bs-btn-disabled-border-color: #a8e1c7;
 }
+
+.carousel-caption {
+    font-weight: 700;
+}
