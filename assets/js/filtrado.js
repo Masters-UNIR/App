@@ -202,7 +202,7 @@ function mostrarProductos(productos, rate, currencySymbol) {
                     <p class="card-text">${texto}</p>
                     <p class="marca">${marca}</p>
                     <p class="presenta">${presentacion}</p>
-                    <p class="descuento"><span class="tachado">${(preciobaseeu * (rate ? rate : 1)).toFixed(2)}</span> <span class="divisa">${currencySymbol ? currencySymbol : '€'}</span> <span class="porcentaje">${descuento}%</span></p>
+                    <p class="descuento"><span class="tachado text-decoration-line-through">${(preciobaseeu * (rate ? rate : 1)).toFixed(2)}</span> <span class="divisa">${currencySymbol ? currencySymbol : '€'}</span> <span class="porcentaje border rounded p-1">${descuento}%</span></p>
                     <p class="precio">${(precioFinal * (rate ? rate : 1)).toFixed(2)} <span class="divisa">${currencySymbol ? currencySymbol : '€'}</span></p>
                 </div>
 				<div class="card-footer">

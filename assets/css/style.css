@@ -29,7 +29,7 @@ h1 {
 }
 
 .card {
-    min-height: 766px;
+    min-height: 826px;
 }
 
 .card-footer {
@@ -177,4 +177,15 @@ h1 {
 
 .carousel-caption {
     font-weight: 700;
+}
+
+.porcentaje {
+    background-color: #a8e1c7;
+}
+
+.precio {
+    font-weight: 700;
+    color: #a8e1c7;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 }
