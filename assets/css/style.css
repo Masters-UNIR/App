@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header, footer{
     background:#a8e1c7;
 }
@@ -8,6 +12,12 @@ header, footer{
     background:#a8e1c7;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+}
 
 
 h1 {
