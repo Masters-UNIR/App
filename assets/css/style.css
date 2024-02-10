@@ -19,7 +19,12 @@ h1 {
 }
 
 .card {
-    min-height: 750px;
+    min-height: 766px;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
 }
 
 .card-inicio {
