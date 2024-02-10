@@ -76,8 +76,8 @@ if (categoria) {
     categoria.addEventListener('change', e => {
         datosFiltrado.categoria = e.target.value;
     
-        filtrarProducto();
         cargarSubcategorias();
+        filtrarProducto();
     });
 }
 
@@ -273,6 +273,9 @@ function cargarSubcategorias() {
 			opcion.textContent = subcategoria;
 			subCategoria.appendChild(opcion);
 		});
+	}else {
+		// limpiar subcategorias
+		subCategoria.innerHTML = `<option value="">Subcategoría</option>`;
 	}
 
 }
