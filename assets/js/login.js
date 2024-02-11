@@ -105,44 +105,71 @@ function validarFormulario(e) {
 // Entrada de cliente
 function loginCliente(e) {
 	e.preventDefault();
+	//
+	let usuarioLogeado;
+	const usuarioLogeadoExist = usuarios.find((usuario) => usuario.email === emailLogin.value.toLowerCase());
 
-    // comprobamos si usuario logeado esta registrado en localStorage
-    usuarioRegistrado = JSON.parse(localStorage.getItem('usuario')) || [];
-    if (usuarioRegistrado !== []) {
+	let usuarioStorageExist;
+	if (JSON.parse(localStorage.getItem('usuario'))) {
+		usuarioStorageExist = JSON.parse(localStorage.getItem('usuario')).find((usuario) => usuario.email === emailLogin.value.toLowerCase());
+	}
 
-		const email = usuarioRegistrado[0].email.toLowerCase();
-        const password = usuarioRegistrado[0].password;
-    
-        if (email === emailLogin.value.toLowerCase() && password === passwordLogin.value) {
-            const parrafo = document.createElement('p');
-            parrafo.textContent = 'Nos alegra volverte a ver...';
-            parrafo.classList.add('logeado-ok');
+    if (usuarioLogeadoExist) {
 
-            botonEntrar.appendChild(parrafo);
+		usuarioLogeado = usuarios.filter((usuario) => usuario.email === emailLogin.value.toLowerCase());
+	} else if (usuarioStorageExist){
+		usuarioLogeado = JSON.parse(localStorage.getItem('usuario'));
+	} else {
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Email o password erroneos';
+		parrafo.classList.add('error');
 
-            setTimeout(() => {
-                parrafo.remove();
-                formLogin.reset();
+		botonEntrar.appendChild(parrafo);
 
-                iniciar();
-                location.href = "index.html";
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
 
-            }, 2000);
-        } else {
-            const parrafo = document.createElement('p');
-            parrafo.textContent = 'Email o password erroneos';
-            parrafo.classList.add('error');
+			iniciar();
 
-            botonEntrar.appendChild(parrafo);
+		}, 2000);
 
-            setTimeout(() => {
-                parrafo.remove();
-                formLogin.reset();
+		return;
+	}
+	const email = usuarioLogeado[0].email.toLowerCase();
+	const password = usuarioLogeado[0].password;
 
-                iniciar();
+	if (email === emailLogin.value.toLowerCase() && password === passwordLogin.value) {
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Nos alegra volverte a ver...';
+		parrafo.classList.add('logeado-ok');
 
-            }, 2000);
-        }
-	}	
+		botonEntrar.appendChild(parrafo);
 
-}
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
+
+			iniciar();
+			localStorage.setItem('usuario', JSON.stringify(usuarioLogeado));
+
+			location.href = "index.html";
+
+		}, 2000);
+	} else {
+		const parrafo = document.createElement('p');
+		parrafo.textContent = 'Email o password erroneos';
+		parrafo.classList.add('error');
+
+		botonEntrar.appendChild(parrafo);
+
+		setTimeout(() => {
+			parrafo.remove();
+			formLogin.reset();
+
+			iniciar();
+
+		}, 2000);
+	}
+}	
+

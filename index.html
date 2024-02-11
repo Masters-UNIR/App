@@ -31,16 +31,16 @@
             
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg" style="background-color:#a8e1c7;">
-				  <div class="container-fluid p-2">
-					<a class="navbar-brand" href="index.html">
+				  <div class="container-fluid px-5">
+					  <a class="navbar-brand" href="index.html">
 					  <img src="assets/img/logo_3.svg" alt="Logo" width="60%">
-				   </a>
+				    </a>
 					
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					  <span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarScroll">
-					  <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+					<div class="collapse navbar-collapse" id="navbarNav">
+					  <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
 						<li class="nav-item">
 						  <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
 						</li>
@@ -48,8 +48,8 @@
 							<a class="nav-link" aria-current="page" href="productos.html">PRODUCTOS</a>
 						  </li>
 
-						  <li class="nav-item">
-							  <a class="nav-link active" aria-current="page" href="login.html">LOGIN</a>
+						  <li class="nav-item" id="login-logout">
+							  <a class="nav-link" aria-current="page" href="login.html" id="login">LOGIN</a>
 							</li>
 					
 						<li class="nav-item">
@@ -74,7 +74,9 @@
 			<div class="bienvenida text-center my-5">
 				<div class="bienve">
                     <h2>HERBORISTERÍA LA NATURAL</h2>
-					<h4>Bienvenid@</h4>
+                    <div class="usuario"> <!--llamada a usuario-->
+                      <p>Bienvenid@ <span id="nombre-usuario"></span></p>
+                    </div>
 					<span id="nombre-usuario" class="name"></span>
 				</div>
 				<br>
@@ -82,46 +84,45 @@
 		</div>
        
 <!--carrousel de fotos. Bootstrap-->
-         <section class="carrusel">
-            <div id="carouselExampleCaptions" class="carousel slide">
+<section class="carrusel">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                  </div>
-        <div class="carousel-inner">
-              <div class="carousel-item active">
-                 <img src="assets/img/hierbas_2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Hierbas aromáticas</h2>
-            <p>Aprende a consservar tus hierbas en casa</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-
-          <img src="assets/img/hierbas_3.jpeg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Hierbas medicinales</h2>
-            <p>Los básicos para el bienestar en el hogar</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="assets/img/hierbas_4.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>Recetas</h2>
-            <p>Aprende a preparar tus propios ungüentos</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/hierbas_2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Hierbas aromáticas</h2>
+                      <p>Aprende a conservar tus hierbas en casa</p>
+                    </div>
+                  </div>
+                 <div class="carousel-item">
+                    <img src="assets/img/hierbas_1.jpg" class="d-block w-100" alt="...">
+                   <div class="carousel-caption d-none d-md-block">
+                      <h2>Hierbas medicinales</h2>
+                      <p>Los básicos para el bienestar en el hogar</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/hierbas_4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Recetas</h2>
+                      <p>Aprende a preparar tus propios ungüentos</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 </section>  
      
 <section class="todos my-5"> <!-- Muestra en cards todos los productos-->   
@@ -130,173 +131,115 @@
     <section class="currency-container my-5">
       <div class="container">
         <div class="row align-items-start">
-
        <!-- productos en cards-->      
-    <div class="container">
-      <div id="productos" class="row"></div>
+           <div class="container">
+              <div id="productos" class="row"></div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+          <a href="productos.html" class="btn btn-info">Ver más productos</a>
+        </div>
       </div>
-    </div>
-  
-      <script src="productos.js"></script>
-      <script src="main.js"></script>
     </section>
-      <script src="./assets/js/productos.js"></script>
-      <script src="./assets/js/main.js"></script>
-<!--Uso de componente Cards
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-
-
-           
-            <div class="card text-center">
-              <img src="assets/img/hierbabuena.jpg" class="card-img-top rounded" height=300>
-              <div class="card-body">
-                <h5 class="card-title">Hierbabuena</h5>
-                <p class="card-text">La hierbabuena es muy efectiva en los tratamientos de los dolores menstruales y para tratar problemas nerviosos, ya que es relajante.</p>
-                <a href="" class="btn btn-info text-center mt-3">Leer más</a>
-              </div>
-            </div>
-          </div>
-        
-
-        <div class="col-4">
-          <div class="card text-center">
-            <img src="assets/img/lavanda.jpg" class="card-img-top rounded" height=300>
-            <div class="card-body">
-              <h5 class="card-title">Lavanda</h5>
-              <p class="card-text">La lavanda actúa como tranquilizante ante estados emocionales de nerviosismo y además ayuda a conciliar el sueño.</p><br>
-              <a href="" class="btn btn-info  text-center mt-3">Leer más</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="card text-center">
-            <img src="assets/img/manzanilla.png" class="card-img-top rounded" height=300>
-            <div class="card-body">
-              <h5 class="card-title">Manzanilla</h5>
-              <p class="card-text">Ayuda a una buena digestión. Mejora la digestión, relajando los músculos intestinales y evitando la indigestión. Combate la pesadez y te hace sentir mejor.</p>
-              <a href="" class="btn btn-info text-center mt-3">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- -->
-    </div>
-
-
+    <script src="./assets/js/productos.js"></script>
+    <script src="./assets/js/main.js"></script>
  </section>
 
 
-</section>
-			<section class="marcas">
-				<h2 class="">Marcas Destacadas</h2>
+
+
+			 <!-- marcas destacadas -->
+				<section class="tmarcas my-5">  
+          <h2 class="text-center my-5">NUESTRAS MARCAS</h2>
 				<div class="container-marcas">
-					<ul class="">
-						<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas01.jpg" alt="">
-					</picture>
-				</li>
-				<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas02.jpg" alt="">
-							</picture>
-				</li>
-				<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas03.jpg" alt="">
-							</picture>
-				</li>
-				<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas04.jpg" alt="">
-							</picture>
-				</li>
-				<li>
-							<picture class="">
-								<img width="120" src="assets/img/marcas05.jpg" alt="">
-							</picture>
-				</li>
-			</ul>
+        
+					<div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3 text-center p-3">
+                <img src="./assets/img/josenea_logo.png" class="img-fluid" alt="Imagen 1" style="max-width: 200px; max-height: 200px;">
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 text-center p-3">
+                <img src="./assets/img/sorianatural.png" class="img-fluid" alt="Imagen 2" style="max-width: 200px; max-height: 200px;">
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 text-center p-3">
+                <img src="./assets/img/artemis.jpg" class="img-fluid" alt="Imagen 3" style="max-width: 200px; max-height: 200px;">
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 text-center p-3">
+                <img src="./assets/img/logo-yogi-tea.gif" class="img-fluid" alt="Imagen 4" style="max-width: 200px; max-height: 200px;">
+              </div>
+            </div>
+          </div>          
 		</div>
 </section>
 
-<hr>
 			
-<!-- Forma de pago. Crear un pre-footer para meter el contenido-->
-<section class="info content">
-				<div class="cards-info">
-					<div class="card-info">
-						<div class="iconos">
-							<i class="fas fa-credit-card"></i>
-						</div> <!-- Fin .iconos -->
-						<div class="contenido">
-							<p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
-						</div> <!-- Fin .contenido -->
-					</div> <!-- Fin .card-info -->
-					<div class="card-info">
-						<div class="iconos2">
-							<i class="fa-solid fa-comments"></i>
-						</div> <!-- Fin .iconos -->
-						<div class="contenido">
-							<p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
-						</div> <!-- Fin .contenido -->
-					</div> <!-- Fin .card-info -->
-					<div class="card-info">
-						<div class="iconos3">
-							<i class="fa-solid fa-truck"></i>
-						</div> <!-- Fin .iconos -->
-						<div class="contenido">
-							<p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
-						</div> <!-- Fin .contenido -->
-					</div> <!-- Fin .card-info -->
-				</div> <!-- Fin .cards-info -->
+<!-- Forma de pago.-->
+<section class="info content pt-5 pb-5"  style="background-color: #a8e1c7">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 text-center py-3">
+        <div class="card-info">
+          <div class="iconos">
+            <i class="fas fa-credit-card fs-1"></i>
+          </div>
+          <div class="contenido">
+            <p class="">Pago seguro con tarjeta,<br> transferencia o PayPal</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center py-3">
+        <div class="card-info">
+          <div class="iconos2">
+            <i class="fas fa-comments fs-1"></i>
+          </div>
+          <div class="contenido">
+            <p class="">Atención Personalizada 647894562<br> L - V de 9:00 a 14:00<br> y de 17:00 a 20:00<br> S de 9:00 a 14:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center py-3">
+        <div class="card-info">
+          <div class="iconos3">
+            <i class="fas fa-truck fs-1"></i>
+          </div>
+          <div class="contenido">
+            <p class="">Envío Gratis<br> A partir de <span id="envioGratis">45</span><span class="moneda">€</span> en Península</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
 <!--footer-->
 
 	<footer class="text-center text-lg-start text-white" style="background-color: #30363a">
-    
-    <!-- Section: Redes sociales -->
-    <section class="d-flex justify-content-between p-4" style="background-color: #a8e1c7">
-      <div class="me-5 ps-5"> <span>Nuestras redes sociales:</span>
-      <!-- Iconos -->
-      <div class="iconos_redes text-center">
-        <a class="icon-link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-          </svg>
-        </a>
-        <a class="icon-link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-          </svg>
-        </a>
-        <a class="icon-link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-          </svg>
-        </a>
-       </div>
-      </div>
-    </section>
 
-
-    <!-- Section: Links  -->
-    <section class="links">
+    <section class="links pt-5">
       <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
         <div class="row mt-3">
-          <!-- Grid column 1-->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold">LA NATURAL</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                 style="width: 60px; background-color: #a8e1c7; height: 2px"/>
-            <p>
-             LA NATURAL te ofrece los mejores productos naturales para tu bienestar</p>
+                <p> LA NATURAL te ofrece los mejores productos naturales para tu bienestar</p>
+             <div class="iconos_redes text-center">
+              <a class="icon-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+              </a>
+              <a class="icon-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+              </a>
+              <a class="icon-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+              </a>
+             </div>
           </div>
       
           <!-- Grid column 2-->
@@ -361,9 +304,7 @@
     </div>
 </footer>
 
-</div>
 
-</html>
 	<!-- Botón volver arriba -->
 	<div class="go-top-container">
 		<div class="go-top-button">
@@ -371,11 +312,13 @@
 		</div>
 	</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<script src="./assets/js/goTop.js"></script>
 	<script src="./assets/js/productos.js"></script>
 	<script src="./assets/js/divisas.js"></script>
-	<script src="./assets/js/filtrado.js"></script>
+	<!-- <script src="./assets/js/filtrado.js"></script> -->
+	<script src="./assets/js/Usuario.js"></script>
+	<script src="./assets/js/usuarios.js"></script>
 	<script src="./assets/js/login-logout.js"></script>
 	<script src="./assets/js/carrito.js"></script>
 	<!-- <script src="assets/js/compra.js"></script> -->

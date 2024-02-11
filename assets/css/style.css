@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header, footer{
     background:#a8e1c7;
 }
@@ -5,8 +9,16 @@ header, footer{
     background:#a8e1c7;
 }
 .media{
-    background:#e1f6fa;
+    background:#a8e1c7;
 }
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+}
+
 
 h1 {
     font-size: 32px;
@@ -17,8 +29,22 @@ h1 {
 }
 
 .card {
-    min-height: 630px;
+    min-height: 826px;
 }
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+.card-inicio {
+    min-height: 650px;
+}
+
+.modal-dialog {
+    max-width: 400px; /* Ancho máximo del modal */
+    margin: 100px auto; /* Margen superior e inferior automáticamente calculado para centrar verticalmente */
+  }
 
 .error {
     border: 2px solid red;
@@ -42,6 +68,10 @@ h1 {
 
 .cursor-not-allowed {
     cursor: not-allowed;
+}
+
+.btn:disabled {
+    pointer-events: all;
 }
 
 .registrado-ok,
@@ -74,7 +104,7 @@ h1 {
     left: 50%;
     z-index: -10;
     position: relative;
-    background-color: #66cb52;
+    background-color: #a8e1c7;
 }
 
 .fa-chevron-up {
@@ -143,4 +173,19 @@ h1 {
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: #a8e1c7;
     --bs-btn-disabled-border-color: #a8e1c7;
+}
+
+.carousel-caption {
+    font-weight: 700;
+}
+
+.porcentaje {
+    background-color: #a8e1c7;
+}
+
+.precio {
+    font-weight: 700;
+    color: #a8e1c7;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
 }
