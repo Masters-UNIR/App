@@ -142,7 +142,7 @@ function loginCliente(e) {
 	if (email === emailLogin.value.toLowerCase() && password === passwordLogin.value) {
 		const parrafo = document.createElement('p');
 		parrafo.textContent = 'Nos alegra volverte a ver...';
-		parrafo.classList.add('logeado-ok');
+		parrafo.classList.add('logeado-ok', 'm-2');
 
 		botonEntrar.appendChild(parrafo);
 

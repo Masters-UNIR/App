@@ -287,7 +287,7 @@ function registrarUsuario(e) {
 	// Comunicar que se registro correctamente
 	const parrafo = document.createElement('p');
 	parrafo.textContent = 'El registro se efectuó correctamente';
-	parrafo.classList.add('registrado-ok');
+	parrafo.classList.add('registrado-ok', 'm-2');
 
 	botonEnviar.appendChild(parrafo);
 
