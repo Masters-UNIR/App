@@ -199,12 +199,12 @@ function carritoHTML(rate, currencySymbol) {
 			${(preciofinal * (rate ? rate : 1)).toFixed(2)} ${currencySymbol ? currencySymbol : '€'}
 		</td>
 		<td>
-			<button class="btn-mas border rounded text-white bg-orange-500 p-3">+</button>
+			<button class="btn-mas btn btn-info border rounded text-white p-3">+</button>
 			<span class="cantidadProducto" data-id="${productoId}">${cantidad}</span>
-			<button class="btn-menos border rounded text-white bg-orange-500 p-3">-</button>
+			<button class="btn-menos btn btn-info border rounded text-white p-3">-</button>
 		</td>
 		<td>
-			<a href="#" class="borrar-producto border rounded p-3 text-white bg-red-600" data-id="${productoId}">Eliminar</a>
+			<a href="#" class="borrar-producto btn btn-danger border rounded p-3 text-white" data-id="${productoId}">Eliminar</a>
 		</td>
 		`;
 
