@@ -8,12 +8,23 @@ const envioGratisApartir = 45;
 
 let rate;
 let currencySymbol;
+let currencyValue;
 
 document.addEventListener('DOMContentLoaded', () => {
 
 	rate = Number(JSON.parse(localStorage.getItem('rate'))) || 1;
 
 	currencySymbol = JSON.parse(localStorage.getItem('currencySymbol')) || '€';
+
+	currencyValue = JSON.parse(localStorage.getItem('currencyValue')) || 'EUR';
+	if (currencyValue !== 'EUR') {
+		const options = currency.querySelectorAll('option');
+		const optionsToArray = Array.apply(null, options);
+		const optionSelected = optionsToArray.filter((option) => {
+			return option.value === currencyValue;
+		});
+		optionSelected[0].setAttribute('selected', 'selected');
+	}
 
 })
 
@@ -25,7 +36,7 @@ if (currency) {
 // Fetch a la API "Exchange Rates" y actualización del DOM
 function calculate() {
 
-    const currencyValue = currency.value;
+    currencyValue = currency.value;
 
     fetch('https://v6.exchangerate-api.com/v6/e8cbd1badb9430319b8513ef/latest/EUR')
         .then(res => res.json())
@@ -99,7 +110,7 @@ function calculate() {
 			sincronizarDivisasStorage();
 
 
-			return rate, currencySymbol;
+			return rate, currencySymbol, currencyValue;
         })
         .catch(showError);
 }
@@ -107,6 +118,7 @@ function calculate() {
 function sincronizarDivisasStorage() {
 	localStorage.setItem('rate', JSON.stringify(rate));
 	localStorage.setItem('currencySymbol', JSON.stringify(currencySymbol));
+	localStorage.setItem('currencyValue', JSON.stringify(currencyValue));
 }
 
 // Función que muestra los errores en caso de fallo en la petición a la API
