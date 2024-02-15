@@ -15,3 +15,8 @@
 [https://github.com/Masters-UNIR/App/tree/main](https://github.com/Masters-UNIR/App/tree/main)
 
 ## El presente trabajo se puede ver en:
+[https://masters-unir.github.io/App/](https://masters-unir.github.io/App/)
+
+## El presente trabajo ha sido realizado por:
+- Miren Gentxane Bilbao García
+- Jesús Martín Blanco
