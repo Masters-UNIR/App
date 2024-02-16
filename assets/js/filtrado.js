@@ -206,7 +206,7 @@ function mostrarProductos(productos, rate, currencySymbol) {
                     <p class="precio">${(precioFinal * (rate ? rate : 1)).toFixed(2)} <span class="divisa">${currencySymbol ? currencySymbol : '€'}</span></p>
                 </div>
 				<div class="card-footer">
-					<a href="#" class="agregar-carrito btn btn-info text-center mt-3" data-id="${productoId}">Añadir al Carrito</a>
+					<a href="#" class="agregar-carrito btn btn-info text-center mt-3 mb-5" data-id="${productoId}">Añadir al Carrito</a>
 				</div>
             </div>
         `;
