@@ -29,7 +29,8 @@ h1 {
 }
 
 .card {
-    min-height: 826px;
+    min-height: 800px;
+    max-height: 800px;
 }
 
 .card-footer {
@@ -185,9 +186,10 @@ h1 {
 
 .precio {
     font-weight: 700;
-    color: #a8e1c7;
-    font-size: 1.875rem;
+    color: #3b423f;
+    font-size: 1.2rem;
     line-height: 2.25rem;
+    text-align:center
 }
 
 .cantidad-producto {
