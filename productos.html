@@ -87,8 +87,8 @@
 			<section class="currency-container container my-4">
 				<div class="row">
 					<!-- Selección de moneda-->
-					<div class="col-12 col-md-6 justify-content-center mt-3">
-						<div class="currency">
+					<div class="col-12 col-md-6 mt-3">
+						<div class="currency ">
 							<select class="p-2 rounded bg-secondary text-white" name="currency" id="currency">
 								<option value="EUR">EUR | EURO</option>
 								<option value="ARS">ARS | PESO ARGENTINO</option>
@@ -108,9 +108,9 @@
 						</div>
 					</div>
 					<!-- Ordenar-->
-					<div class="col-12 col-md-6 justify-content-center mt-3">
+					<div class="col-12 col-md-6 mt-3">
 						<div class="ordenar">
-							<form class="d-flex justify-content-md-end" action="">
+							<form class="d-flex" action="">
 								<select class=" p-2 rounded bg-secondary text-white" name="ordenar" id="ordenar">
 									<option selected value="">Ordenar por:</option>
 									<option value="pa">Precio: más bajo el primero</option>
@@ -128,71 +128,64 @@
 			<section class="todos my-2 container">
 				<div class="todos-productos my-2">
 					<div class="zona-filtros">
-						<h4 class="filtros">Filtros</h4>
-						<div class="contenedor-filtros">
-							<form id="filtros">
-								<div class="precios">
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="precio-min" id="precio-min">
-											<option selected value="">Precio Mínimo</option>
-											<option value="2">2€</option>
-											<option value="5">5€</option>
-											<option value="10">10€</option>
-											<option value="15">15€</option>
-											<option value="20">20€</option>
-										</select>
-									</div>
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="precio-max" id="precio-max">
-											<option selected value="">Precio Máximo</option>
-											<option value="20">20€</option>
-											<option value="25">25€</option>
-											<option value="30">30€</option>
-											<option value="35">35€</option>
-											<option value="40">40€</option>
-										</select>
-									</div>
+						<form id="filtros" class="todos-productos my-2">
+							<div class="btn-toolbar  justify-content-center" role="toolbar">
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle precio-min" name="precio-min" id="precio-min">
+										<option selected value="">Precio Mínimo</option>
+										<option value="2">2€</option>
+										<option value="5">5€</option>
+										<option value="10">10€</option>
+										<option value="15">15€</option>
+										<option value="20">20€</option>
+									</select>
 								</div>
-								<div class="categorias">
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="categoria" id="categoria">
-											<option selected value="">Categoría</option>
-											<!-- Se cargan dinamicamente -->
-										</select>
-									</div>
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="subcategoria" id="subcategoria">
-											<option selected value="">Subcategoría</option>
-											<!-- generados dinámicamente a partir de la categoría seleccionada -->
-										</select>
-									</div>
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle precio-max" name="precio-max" id="precio-max">
+										<option selected value="">Precio Máximo</option>
+										<option value="20">20€</option>
+										<option value="25">25€</option>
+										<option value="30">30€</option>
+										<option value="35">35€</option>
+										<option value="40">40€</option>
+									</select>
 								</div>
-								<div class="marcas">
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="marca" id="marca">
-											<option selected value="">Marca</option>
-											<option value="Josenea">Josenea Bio</option>
-											<option value="Soria Natural">Soria Natural</option>
-											<option value="Artemis">Artemis Bio</option>
-											<option value="Yogi Tea">Yogi Tea</option>
-											<!-- Opciones de marca -->
-										</select>
-									</div>
-									<div class="btn-group my-2" role="group">
-										<select class="btn btn-secondary dropdown-toggle" name="descuento" id="descuento">
-											<option selected value="">Descuento</option>
-											<option value="1">Hasta 10%</option>
-											<option value="11">De 11% a 20%</option>
-											<option value="21">De 21% a 30%</option>
-											<option value="31">De 31% a 40%</option>
-											<option value="41">De 41% a 50%</option>
-										</select>
-									</div>
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle categoria" name="categoria" id="categoria">
+										<option selected value="">Categoría</option>
+										<!-- Se cargan dinamicamente -->
+									</select>
 								</div>
-							</form>
-						</div>
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle subcategoria" name="subcategoria" id="subcategoria">
+										<option selected value="">Subcategoría</option>
+										<!-- generados dinámicamente a partir de la categoría seleccionada -->
+									</select>
+								</div>
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle marca" name="marca" id="marca">
+										<option selected value="">Marca</option>
+										<option value="Josenea">Josenea Bio</option>
+										<option value="Soria Natural">Soria Natural</option>
+										<option value="Artemis">Artemis Bio</option>
+										<option value="Yogi Tea">Yogi Tea</option>
+										<!-- Opciones de marca -->
+									</select>
+								</div>
+								<div class="btn-group mx-2 my-2" role="group">
+									<select class="btn btn-secondary dropdown-toggle descuento" name="descuento" id="descuento">
+										<option selected value="">Descuento</option>
+										<option value="1">Hasta 10%</option>
+										<option value="11">De 11% a 20%</option>
+										<option value="21">De 21% a 30%</option>
+										<option value="31">De 31% a 40%</option>
+										<option value="41">De 41% a 50%</option>
+									</select>
+								</div>
+							</div>
+						</form>						
 					</div>
-					
+					<!-- Muestra cards productos generados dinámicamente -->
 					<div class="zona-productos my-4" id="lista-productos">
 						<div class="slider-container-tv cards-productos container">
 							<ul class="row list-unstyled" id="resultado">
