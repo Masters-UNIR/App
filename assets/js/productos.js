@@ -54,7 +54,7 @@ const productos = [
     {
         productoId: 5,
         nombre: 'Estragón',
-        texto:'El estragón es una planta muy nutritiva que más allá de dar sabor a las comidas, cuida de nuestro organismo. Sobresale por sus propiedades digestivas, especialmente tras ingestas pesadas, al tiempo que regula el tránsito intestinal gracias a su contenido en fibra.',
+        texto:'Es una planta muy nutritiva que más allá de dar sabor a las comidas, cuida de nuestro organismo. Sobresale por sus propiedades digestivas, especialmente tras ingestas pesadas, al tiempo que regula el tránsito intestinal gracias a su contenido en fibra.',
         marca: 'Josenea',
         presentacion: '300gr.',
         preciobaseeu: 45,
